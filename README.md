@@ -17,7 +17,7 @@ Build a simple Twitter client that supports viewing a Twitter timeline and compo
 &nbsp;&nbsp;&nbsp;&nbsp;User can then enter a new tweet and post this to twitter<br>
 &nbsp;&nbsp;&nbsp;&nbsp;User is taken back to home timeline with new tweet visible in timeline<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Optional: User can see a counter with total number of characters left for tweet<br>
-[] Advanced: User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)<br>
+[x] Advanced: User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)<br>
 [] Advanced: User can open the twitter app offline and see last loaded tweets<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Tweets are persisted into sqlite and can be displayed from the local DB<br>
 Advanced: User can tap a tweet to display a "detailed" view of that tweet<br>
@@ -27,3 +27,5 @@ Bonus: User can see embedded image media within the tweet detail view<br>
 Bonus: Compose activity is replaced with a modal overlay<br>
 
 ![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/simpletwitter.gif "simpletwitter.gif")
+
+![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/simpletwitterpullrefresh.gif "simpletwitterpullrefresh.gif")
