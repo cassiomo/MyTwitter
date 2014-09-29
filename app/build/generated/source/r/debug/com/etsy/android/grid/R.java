@@ -8,17 +8,17 @@ package com.etsy.android.grid;
 
 public final class R {
 	public static final class attr {
-		public static final int column_count = 0x7f010062;
-		public static final int column_count_landscape = 0x7f010064;
-		public static final int column_count_portrait = 0x7f010063;
-		public static final int grid_paddingBottom = 0x7f010069;
-		public static final int grid_paddingLeft = 0x7f010066;
-		public static final int grid_paddingRight = 0x7f010067;
-		public static final int grid_paddingTop = 0x7f010068;
-		public static final int item_margin = 0x7f010065;
+		public static final int column_count = 0x7f01007d;
+		public static final int column_count_landscape = 0x7f01007f;
+		public static final int column_count_portrait = 0x7f01007e;
+		public static final int grid_paddingBottom = 0x7f010084;
+		public static final int grid_paddingLeft = 0x7f010081;
+		public static final int grid_paddingRight = 0x7f010082;
+		public static final int grid_paddingTop = 0x7f010083;
+		public static final int item_margin = 0x7f010080;
 	}
 	public static final class styleable {
-		public static final int[] StaggeredGridView = { 0x7f010062, 0x7f010063, 0x7f010064, 0x7f010065, 0x7f010066, 0x7f010067, 0x7f010068, 0x7f010069 };
+		public static final int[] StaggeredGridView = { 0x7f01007d, 0x7f01007e, 0x7f01007f, 0x7f010080, 0x7f010081, 0x7f010082, 0x7f010083, 0x7f010084 };
 		public static final int StaggeredGridView_column_count = 0;
 		public static final int StaggeredGridView_column_count_landscape = 2;
 		public static final int StaggeredGridView_column_count_portrait = 1;

@@ -14,17 +14,29 @@
         revision="20.0.0"
         sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
     <item
-        dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/classes-6733ec0db3b052c6e98a1058bdc36e7a949444f5.jar"
-        jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.etsy.android.grid/library/1.0.5/classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="8218789edb56bdcfff7da48e892b37460fc707e2"/>
-    <item
         dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.3-88c79bccb118ae9386a22740f4678b67b6714880.jar"
         jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/libs/android-async-http-1.4.3.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="f70e680861fdf9449819003e7799a4e9aca047f8"/>
+    <item
+        dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.3.0-bcfe5fd8790e92bab1fc60c8d6d90f778f3941a0.jar"
+        jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/libs/codepath-oauth-0.3.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b90f1c3541987f690e2fb854775914cc23266250"/>
+    <item
+        dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/classes-5cda5e4c7ebfcba80a4dc76c8757cb60e5d0aae7.jar"
+        jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6ca319f998430aa20c4dde97ba6df213d6cf3dd0"/>
+    <item
+        dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/classes-6733ec0db3b052c6e98a1058bdc36e7a949444f5.jar"
+        jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.etsy.android.grid/library/1.0.5/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8218789edb56bdcfff7da48e892b37460fc707e2"/>
     <item
         dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/classes-e336e6bb173eba03902f54845255b0a3cda1ebfa.jar"
         jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
@@ -32,11 +44,11 @@
         revision="20.0.0"
         sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
     <item
-        dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.3.0-bcfe5fd8790e92bab1fc60c8d6d90f778f3941a0.jar"
-        jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/libs/codepath-oauth-0.3.0.jar"
+        dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/classes-e204d4862edf6ffaa8e21e5b83bf42f8fc1f9b27.jar"
+        jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="b90f1c3541987f690e2fb854775914cc23266250"/>
+        sha1="06ca4ea902f14efb76284d918edb085df33cc365"/>
     <item
         dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/classes-4a538526c1753037192d0d12188ec51c7b50ef38.jar"
         jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/classes.jar"
@@ -56,16 +68,16 @@
         revision="20.0.0"
         sha1="6e0748acc9e7be0695de0d38016d260df52d9167"/>
     <item
-        dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/ActiveAndroid-3.1-adcddac4c58-cad1e2db3d07de6eb0c6737edc62a9a0e392a630.jar"
-        jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/libs/ActiveAndroid-3.1-adcddac4c58.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="e550c03ed8bcfe3b9f97d8c5ce6e8ee305f3beed"/>
-    <item
         dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/codepath-utils-993f3cefe6f10e5980340d3462eb6772b45c0454.jar"
         jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/libs/codepath-utils.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="10901a5ef726eacf1b2443b7f38dc4cc9cd3f7d4"/>
+    <item
+        dex="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/pre-dexed/debug/ActiveAndroid-3.1-adcddac4c58-cad1e2db3d07de6eb0c6737edc62a9a0e392a630.jar"
+        jar="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/libs/ActiveAndroid-3.1-adcddac4c58.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e550c03ed8bcfe3b9f97d8c5ce6e8ee305f3beed"/>
 
 </pre-dex-items>
