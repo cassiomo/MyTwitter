@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="20.0.0" >
+        <source path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/assets" />
+    </dataSet>
+    <dataSet config="1.0.5" >
+        <source path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.etsy.android.grid/library/1.0.5/assets" />
+    </dataSet>
+    <dataSet config="4.4.0" >
+        <source path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/debug/assets" />
+    </dataSet>
+
+</merger>

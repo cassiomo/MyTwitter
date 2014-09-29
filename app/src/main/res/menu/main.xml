@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/iPostTweet"
+          android:title="@string/tweet"
+          android:showAsAction="always"
+          android:onClick="onPostTweet"
+          android:icon="@drawable/ic_tweet"/>
+
+    <!--
+    <item android:id="@+id/iProfile"
+          android:title="iProfile"
+          android:showAsAction="always"
+          android:onClick="onProfileView"
+          android:icon="@drawable/ic_home"/>
+    -->
+
+</menu>
