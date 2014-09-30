@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyTwitterClient.iml" filepath="$PROJECT_DIR$/MyTwitterClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/myTwitterClient.iml" filepath="$PROJECT_DIR$/myTwitterClient.iml" />
     </modules>
   </component>
 </project>

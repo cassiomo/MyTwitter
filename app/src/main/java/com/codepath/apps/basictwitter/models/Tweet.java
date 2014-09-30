@@ -10,6 +10,7 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -18,15 +19,16 @@ import java.util.Locale;
 public class Tweet implements Serializable {
 
     private String body;
-    private long uid;
+    private long tId;
     private String createdAt;
     private User user;
+    private ArrayList<String> replies;
 
     public static Tweet fromJson(JSONObject jsonObject) {
         Tweet tweet = new Tweet();
         try {
             tweet.body = jsonObject.getString("text");
-            tweet.uid = jsonObject.getLong("id");
+            tweet.tId = jsonObject.getLong("id");
             tweet.createdAt = jsonObject.getString("created_at");
             tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
         } catch (JSONException e) {
@@ -35,6 +37,36 @@ public class Tweet implements Serializable {
         }
 
         return tweet;
+    }
+
+    public static List<Tweet> readTweetsFromDB() {
+
+        List<TweetModel> tweetModels = TweetModel.getAll();
+        List<Tweet> tweets = new ArrayList<Tweet>();
+        for (TweetModel tweetModel : tweetModels) {
+            Tweet tweet = new Tweet();
+
+            tweet.setUid(tweetModel.tId);
+            tweet.setBody(tweetModel.body);
+            tweet.setCreatedAt(tweetModel.createdAt);
+            tweets.add(tweet);
+        }
+        return tweets;
+    }
+
+    public static TweetModel saveTweetfromJsonToDB(JSONObject jsonObject) {
+        TweetModel tweetModel = new TweetModel(jsonObject);
+        tweetModel.save();
+        return tweetModel;
+    }
+
+    public static TweetModel saveTweetToDB(Tweet tweet) {
+        TweetModel tweetModel = new TweetModel(tweet.gettId()
+                ,tweet.getBody()
+                ,tweet.getCreatedAt()
+                ,tweet.getUser());
+        tweetModel.save();
+        return tweetModel;
     }
 
     public static ArrayList<Tweet> fromJsonArray(JSONArray jsonArray) {
@@ -51,6 +83,8 @@ public class Tweet implements Serializable {
             Tweet tweet = Tweet.fromJson(tweetJson);
             if (tweet !=null) {
                 tweets.add(tweet);
+                // save to DB
+                saveTweetToDB(tweet);
             }
         }
         return tweets;
@@ -60,8 +94,8 @@ public class Tweet implements Serializable {
         return body;
     }
 
-    public long getUid() {
-        return uid;
+    public long gettId() {
+        return tId;
     }
 
     public String getCreatedAt() {
@@ -77,7 +111,7 @@ public class Tweet implements Serializable {
     }
 
     public void setUid(long uid) {
-        this.uid = uid;
+        this.tId = uid;
     }
 
     public void setCreatedAt(String createdAt) {
@@ -92,6 +126,7 @@ public class Tweet implements Serializable {
     public String toString() {
         return getBody() + " - " + getUser().getScreenName();
     }
+
     // getRelativeTimeAgo("Mon Apr 01 21:16:23 +0000 2014");
     public String getRelativeTimeAgo(String rawJsonDate){
         String twitterFormat = "EEE MMM dd HH:mm:ss ZZZZZ yyyy";

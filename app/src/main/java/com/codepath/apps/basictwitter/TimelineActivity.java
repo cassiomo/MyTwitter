@@ -1,12 +1,16 @@
 package com.codepath.apps.basictwitter;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
@@ -21,9 +25,12 @@ import uk.co.senab.actionbarpulltorefresh.library.Options;
 import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout;
 import uk.co.senab.actionbarpulltorefresh.library.listeners.OnRefreshListener;
 
+import org.apache.http.Header;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TimelineActivity extends SherlockFragmentActivity {
 
@@ -99,6 +106,14 @@ public class TimelineActivity extends SherlockFragmentActivity {
 
     }
 
+    private Boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        //boolean isWiFi = activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI;
+        return activeNetworkInfo != null && activeNetworkInfo.isConnectedOrConnecting();
+    }
+
     private void loadMoreTweets(long maxId) {
         populateTimeline(maxId);
     }
@@ -115,28 +130,43 @@ public class TimelineActivity extends SherlockFragmentActivity {
                 @Override
                 public void onLoadMore(int page, int totalItemsCount) {
                     Tweet last_tweet = tweets.get(tweets.size() - 1);
-                    loadMoreTweets(last_tweet.getUid() - 1);
+                    loadMoreTweets(last_tweet.gettId() - 1);
 
                     aTweets.notifyDataSetChanged();
                 }
             });
         }
+        boolean isNetworkAvailable = isNetworkAvailable();
+        if (isNetworkAvailable) {
+            client.getHomeTimeline(new JsonHttpResponseHandler() {
 
-        client.getHomeTimeline(new JsonHttpResponseHandler() {
+                @Override
+                public void onSuccess(JSONArray json) {
+                    Log.d("debug", json.toString());
+                    aTweets.addAll(Tweet.fromJsonArray(json));
+                }
 
-            @Override
-            public void onSuccess(JSONArray json) {
-                Log.d("debug", json.toString());
-                aTweets.addAll(Tweet.fromJsonArray(json));
+                @Override
+                public void onFailure(Throwable throwable, String s) {
+                    Log.d("debug", s.toString());
+                    Log.d("debug", throwable.toString());
+                    Toast.makeText(getApplicationContext(), "Network is not available", Toast.LENGTH_LONG).show();
+                }
 
+                @Override
+                public void onFailure(Throwable throwable, JSONObject jsonObject) {
+                    Toast.makeText(getApplicationContext(), "Network is not available", Toast.LENGTH_LONG).show();
+                }
+            }, maxId);
+        } else {
+            // read from DB.
+            List<Tweet> tweets = Tweet.readTweetsFromDB();
+            if (tweets != null || tweets.size() > 0) {
+                aTweets.addAll(tweets);
+            } else {
+                Toast.makeText(getApplicationContext(), "No Tweets from DB", Toast.LENGTH_LONG).show();
             }
-
-            @Override
-            public void onFailure(Throwable throwable, String s) {
-               Log.d("debug", s.toString());
-               Log.d("debug", throwable.toString());
-            }
-        }, maxId);
+        }
     }
 
     public void onPostTweet(MenuItem mi) {
