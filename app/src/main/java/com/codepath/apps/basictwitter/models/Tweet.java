@@ -22,7 +22,7 @@ public class Tweet implements Serializable {
     private long tId;
     private String createdAt;
     private User user;
-    private ArrayList<String> replies;
+    //private ArrayList<String> replies;
 
     public static Tweet fromJson(JSONObject jsonObject) {
         Tweet tweet = new Tweet();
@@ -65,6 +65,8 @@ public class Tweet implements Serializable {
                 ,tweet.getBody()
                 ,tweet.getCreatedAt()
                 ,tweet.getUser());
+        UserModel userModel = new UserModel(tweet.getUser());
+        userModel.save();
         tweetModel.save();
         return tweetModel;
     }

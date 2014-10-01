@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by kemo on 9/27/14.
  */
-@Table(name = "user")
+@Table(name = "User")
 public class UserModel extends Model {
 
     @Column(name = "uId", index = true, unique = true, onUniqueConflict = Column.ConflictAction.REPLACE)
@@ -43,15 +43,34 @@ public class UserModel extends Model {
 	}
 
 	// Parse model from JSON
-	public UserModel(JSONObject object){
+	public UserModel(JSONObject jsonObject){
 		super();
 
 		try {
-			this.name = object.getString("title");
+            this.name = jsonObject.getString("name");
+            this.uId = jsonObject.getLong("id");
+            this.screenName = jsonObject.getString("screen_name");
+            this.followers = jsonObject.getString("followers_count");
+            this.following = jsonObject.getString("friends_count");
+            this.description = jsonObject.getString("description");
+            this.profileImageUrl = jsonObject.getString("profile_image_url");
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
 	}
+
+    // Parse model from JSON
+    public UserModel(User user){
+        super();
+
+         this.name = user.getName();
+         this.uId = user.getUid();
+         this.screenName = user.getScreenName();
+         this.followers = user.getFollowers();
+         this.following = user.getFollowing();
+         this.description = user.getDescription();
+         this.profileImageUrl = user.getProfileImageUrl();
+    }
 
     public String getName() {
         return name;

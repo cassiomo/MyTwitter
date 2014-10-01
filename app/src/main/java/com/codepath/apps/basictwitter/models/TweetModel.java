@@ -31,6 +31,9 @@ public class TweetModel extends Model {
     @Column(name = "uId")
     public long uId;
 
+    @Column(name = "user")
+    public User user;
+
 //    @Column(name = "replies", onUpdate = Column.ForeignKeyAction.CASCADE, onDelete = Column.ForeignKeyAction.CASCADE)
 //    public ArrayList<Tweet> replies;
 
@@ -43,6 +46,7 @@ public class TweetModel extends Model {
         this.body = body;
         this.createdAt = createdAt;
         this.uId = user.getUid();
+        this.user = user;
     }
 
     // Parse model from JSON
@@ -79,7 +83,7 @@ public class TweetModel extends Model {
                 ", body='" + body + '\'' +
                 ", createdAt='" + createdAt + '\'' +
                 ", uId=" + uId +
-//                ", replies=" + replies +
+                //", replies=" + replies +
                 '}';
     }
 
