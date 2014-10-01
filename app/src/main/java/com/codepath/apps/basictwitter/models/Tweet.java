@@ -44,11 +44,13 @@ public class Tweet implements Serializable {
         List<TweetModel> tweetModels = TweetModel.getAll();
         List<Tweet> tweets = new ArrayList<Tweet>();
         for (TweetModel tweetModel : tweetModels) {
-            Tweet tweet = new Tweet();
+            UserModel userModel = UserModel.byId(tweetModel.uId);
 
+            Tweet tweet = new Tweet();
             tweet.setUid(tweetModel.tId);
             tweet.setBody(tweetModel.body);
             tweet.setCreatedAt(tweetModel.createdAt);
+            tweet.setUser(User.fromUserModel(userModel));
             tweets.add(tweet);
         }
         return tweets;

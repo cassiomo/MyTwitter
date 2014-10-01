@@ -63,13 +63,13 @@ public class UserModel extends Model {
     public UserModel(User user){
         super();
 
-         this.name = user.getName();
-         this.uId = user.getUid();
-         this.screenName = user.getScreenName();
-         this.followers = user.getFollowers();
-         this.following = user.getFollowing();
-         this.description = user.getDescription();
-         this.profileImageUrl = user.getProfileImageUrl();
+        this.name = user.getName();
+        this.uId = user.getUid();
+        this.screenName = user.getScreenName();
+        this.followers = user.getFollowers();
+        this.following = user.getFollowing();
+        this.description = user.getDescription();
+        this.profileImageUrl = user.getProfileImageUrl();
     }
 
     public String getName() {
@@ -122,7 +122,7 @@ public class UserModel extends Model {
 
     // Record Finders
 	public static UserModel byId(long id) {
-		return new Select().from(UserModel.class).where("id = ?", id).executeSingle();
+		return new Select().from(UserModel.class).where("uId = ?", id).executeSingle();
 	}
 
 	public static List<UserModel> getRecentUser() {

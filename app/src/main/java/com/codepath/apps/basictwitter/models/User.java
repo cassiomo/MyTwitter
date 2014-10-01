@@ -38,6 +38,18 @@ public class User implements Serializable {
         return u;
     }
 
+    public static User fromUserModel(UserModel userModel) {
+        User u = new User();
+            u.name = userModel.getName();
+            u.uid = userModel.getId();
+            u.screenName = userModel.getScreenName();
+            u.followers = userModel.getFollowers();
+            u.following = userModel.getFollowing();
+            u.description = userModel.getDescription();
+            u.profileImageUrl = userModel.getProfileImageUrl();
+        return u;
+    }
+
     public String getDescription() {
         return description;
     }
