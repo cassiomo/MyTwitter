@@ -1,8 +1,5 @@
 package com.codepath.apps.basictwitter.models;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -11,8 +8,8 @@ import java.io.Serializable;
 /**
  * Created by kemo on 9/27/14.
  */
-//public class User implements Serializable {
-public class User implements Parcelable {
+public class User implements Serializable {
+//public class User implements Parcelable {
     /**
      *
      */
@@ -25,15 +22,15 @@ public class User implements Parcelable {
     private String following;
     private String description;
 
-    private User(Parcel in) {
-        uid = in.readInt();
-        name = in.readString();
-        screenName = in.readString();
-        profileImageUrl = in.readString();
-        followers = in.readString();
-        following = in.readString();
-        description = in.readString();
-    }
+//    private User(Parcel in) {
+//        uid = in.readInt();
+//        name = in.readString();
+//        screenName = in.readString();
+//        profileImageUrl = in.readString();
+//        followers = in.readString();
+//        following = in.readString();
+//        description = in.readString();
+//    }
 
     public User() {
         //normal actions performed by class, it's still a normal object!
@@ -100,32 +97,32 @@ public class User implements Parcelable {
         return profileImageUrl;
     }
 
-    @Override
+    //@Override
     public int describeContents() {
         return 0;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.name);
-        dest.writeString(this.screenName);
-        dest.writeString(this.profileImageUrl);
-        dest.writeString(this.followers);
-        dest.writeString(this.following);
-        dest.writeString(this.description);
-        dest.writeLong(this.uid);
-    }
-
-    public static final Parcelable.Creator<User> CREATOR
-            = new Parcelable.Creator<User>() {
-        @Override
-        public User createFromParcel(Parcel in) {
-            return new User(in);
-        }
-
-        @Override
-        public User[] newArray(int size) {
-            return new User[size];
-        }
-    };
+//    //@Override
+//    public void writeToParcel(Parcel dest, int flags) {
+//        dest.writeString(this.name);
+//        dest.writeString(this.screenName);
+//        dest.writeString(this.profileImageUrl);
+//        dest.writeString(this.followers);
+//        dest.writeString(this.following);
+//        dest.writeString(this.description);
+//        dest.writeLong(this.uid);
+//    }
+//
+//    public static final Parcelable.Creator<User> CREATOR
+//            = new Parcelable.Creator<User>() {
+//        @Override
+//        public User createFromParcel(Parcel in) {
+//            return new User(in);
+//        }
+//
+//        @Override
+//        public User[] newArray(int size) {
+//            return new User[size];
+//        }
+//    };
 }

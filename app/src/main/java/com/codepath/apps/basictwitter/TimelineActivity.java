@@ -175,6 +175,16 @@ public class TimelineActivity extends SherlockFragmentActivity {
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode == RESULT_OK && requestCode == REQUEST_CODE){
+            Tweet tweet = (Tweet) data.getSerializableExtra("tweet");
+            tweets.add(0, tweet);
+            aTweets.notifyDataSetChanged();
+        }
+
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getSupportMenuInflater();
         inflater.inflate(R.menu.main, menu);

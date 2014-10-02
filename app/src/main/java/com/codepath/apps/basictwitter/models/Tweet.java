@@ -1,7 +1,5 @@
 package com.codepath.apps.basictwitter.models;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.text.format.DateUtils;
 
 import org.json.JSONArray;
@@ -18,8 +16,8 @@ import java.util.Locale;
 /**
  * Created by kemo on 9/27/14.
  */
-//public class Tweet implements Serializable {
-public class Tweet implements Parcelable {
+public class Tweet implements Serializable {
+//public class Tweet implements Parcelable {
 
     private String body;
     private long tId;
@@ -27,12 +25,12 @@ public class Tweet implements Parcelable {
     private User user;
     //private ArrayList<String> replies;
 
-    private Tweet(Parcel in) {
-        tId = in.readInt();
-        body = in.readString();
-        createdAt = in.readString();
-        user = in.readParcelable(ClassLoader.getSystemClassLoader());
-    }
+//    private Tweet(Parcel in) {
+//        tId = in.readInt();
+//        body = in.readString();
+//        createdAt = in.readString();
+//        user = in.readParcelable(ClassLoader.getSystemClassLoader());
+//    }
 
     public Tweet() {
         //normal actions performed by class, it's still a normal object!
@@ -177,29 +175,29 @@ public class Tweet implements Parcelable {
         return relativeDate;
     }
 
-    @Override
+    //@Override
     public int describeContents() {
         return 0;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.body);
-        dest.writeString(this.createdAt);
-        dest.writeParcelable(this.user, flags);
-        dest.writeLong(this.tId);
-    }
-
-    public static final Parcelable.Creator<Tweet> CREATOR
-            = new Parcelable.Creator<Tweet>() {
-        @Override
-        public Tweet createFromParcel(Parcel in) {
-            return new Tweet(in);
-        }
-
-        @Override
-        public Tweet[] newArray(int size) {
-            return new Tweet[size];
-        }
-    };
+//    //@Override
+//    public void writeToParcel(Parcel dest, int flags) {
+//        dest.writeString(this.body);
+//        dest.writeString(this.createdAt);
+//        dest.writeParcelable(this.user, flags);
+//        dest.writeLong(this.tId);
+//    }
+//
+//    public static final Parcelable.Creator<Tweet> CREATOR
+//            = new Parcelable.Creator<Tweet>() {
+//        @Override
+//        public Tweet createFromParcel(Parcel in) {
+//            return new Tweet(in);
+//        }
+//
+//        @Override
+//        public Tweet[] newArray(int size) {
+//            return new Tweet[size];
+//        }
+//    };
 }

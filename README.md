@@ -33,3 +33,5 @@ Build a simple Twitter client that supports viewing a Twitter timeline and compo
 ![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/table.gif "table.gif")
 
 ![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/link.gif "link.gif")
+
+![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/PostTweet.gif "PostTweet.gif")
