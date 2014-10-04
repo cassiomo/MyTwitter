@@ -1,3 +1,56 @@
+<h1> Week 4 Project: Twitter with Fragments</h1>
+
+<p><strong>User Stories</strong>:</p>
+
+<p>The following user stories <strong>must</strong> be completed:</p>
+
+<ul>
+<li>Includes <strong>all required user stories</strong> from Week 3 Twitter Client</li>
+<li>User can switch between Timeline and Mention views using tabs.
+
+<ul>
+<li>User can view their home timeline tweets.</li>
+<li>User can view the recent mentions of their username.</li>
+<li>User can scroll to bottom of either of these lists and new tweets will load ("infinite scroll")</li>
+<li><strong>Optional:</strong> Implement tabs in a <a href="http://guides.codepath.com/android/ActionBar-Tabs-with-Fragments#with-actionbaractivity-support">gingerbread-compatible approach</a></li>
+</ul></li>
+<li>User can navigate to <strong>view their own profile</strong>
+
+<ul>
+<li>User can see picture, tagline, # of followers, # of following, and tweets on their profile.</li>
+</ul></li>
+<li>User can <strong>click on the profile image</strong> in any tweet to see <strong>another user's</strong> profile.
+
+<ul>
+<li>User can see picture, tagline, # of followers, # of following, and tweets of clicked user.</li>
+<li>Profile view should include that user's timeline</li>
+<li><strong>Optional:</strong> User can view following / followers list through the profile</li>
+</ul></li>
+</ul>
+
+<p>The following advanced user stories are <strong>optional</strong>:</p>
+
+<ul>
+<li><strong>Advanced:</strong> Robust error handling, <a href="http://guides.codepath.com/android/Sending-and-Managing-Network-Requests#checking-for-network-connectivity">check if internet is available</a>, handle error cases, network failures</li>
+<li><strong>Advanced:</strong> When a network request is sent, user sees an <a href="http://guides.codepath.com/android/Handling-ProgressBars#actionbar-progress-bar">indeterminate progress indicator</a></li>
+<li><strong>Advanced:</strong> User can "reply" to any tweet on their home timeline
+
+<ul>
+<li>The user that wrote the original tweet is automatically "@" replied in compose</li>
+</ul></li>
+<li><strong>Advanced:</strong> User can click on a tweet to be taken to a "detail view" of that tweet
+
+<ul>
+<li><strong>Advanced:</strong> User can take favorite (and unfavorite) or reweet actions on a tweet</li>
+</ul></li>
+<li><strong>Advanced:</strong> Improve the user interface and theme the app to feel twitter branded</li>
+<li><strong>Advanced</strong>: User can search for tweets matching a particular query and see results</li>
+<li><strong>Bonus:</strong> User can view their direct messages (or send new ones)</li>
+</ul>
+
+![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/AdvanceTwitter.gif "AdvanceTwitter.gif")
+
+
 <h1> Week 3 Project: Simple Twitter Client</h1>
 
 Build a simple Twitter client that supports viewing a Twitter timeline and composing a new tweet.
@@ -25,6 +78,8 @@ Build a simple Twitter client that supports viewing a Twitter timeline and compo
 [] Advanced: Improve the user interface and theme the app to feel "twitter branded"<br>
 [] Bonus: User can see embedded image media within the tweet detail view<br>
 [] Bonus: Compose activity is replaced with a modal overlay<br>
+
+![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/simpletwitter.gif "simpletwitter.gif")
 
 ![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/simpletwitter.gif "simpletwitter.gif")
 
