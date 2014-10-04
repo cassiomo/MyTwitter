@@ -1,20 +1,23 @@
-package com.codepath.apps.basictwitter;
+package com.codepath.apps.basictwitter.activities;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+import com.codepath.apps.basictwitter.R;
+import com.codepath.apps.basictwitter.TwitterApplication;
+import com.codepath.apps.basictwitter.TwitterClient;
 import com.codepath.apps.basictwitter.models.Tweet;
 import com.codepath.apps.basictwitter.models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -22,7 +25,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 import org.json.JSONObject;
 
-public class PostTweetActivity extends Activity {
+public class PostTweetActivity extends SherlockFragmentActivity {
     private EditText etStatus;
     private ImageView ivProfileImage;
     private TextView tvName;
@@ -37,7 +40,7 @@ public class PostTweetActivity extends Activity {
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayShowTitleEnabled(false); // hide app name in action bar
 
-        ActionBar actionBar = getActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         setContentView(R.layout.activity_create_tweet);
@@ -77,11 +80,10 @@ public class PostTweetActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         this.menu = menu;
-        MenuInflater inflater = getMenuInflater();
+        MenuInflater inflater = getSupportMenuInflater();
         inflater.inflate(R.menu.post_tweet, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
 
     public void onPostTweet(MenuItem mi){
         TwitterClient client = new TwitterClient(this);

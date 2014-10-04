@@ -7,12 +7,10 @@
           android:onClick="onPostTweet"
           android:icon="@drawable/ic_tweet"/>
 
-    <!--
     <item android:id="@+id/iProfile"
           android:title="iProfile"
           android:showAsAction="always"
           android:onClick="onProfileView"
           android:icon="@drawable/ic_home"/>
-    -->
 
 </menu>

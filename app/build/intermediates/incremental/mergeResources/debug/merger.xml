@@ -4983,8 +4983,18 @@ false
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_profile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/layout/activity_profile.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_time_line"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/layout/activity_time_line.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_tweets_list"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/layout/fragment_tweets_list.xml"
                 qualifiers=""
                 type="layout" />
             <file

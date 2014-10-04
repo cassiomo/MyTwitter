@@ -28,6 +28,17 @@
     android:layout_height="match_parent"
     tools:context="com.codepath.apps.basictwitter.TimeLineActivity">
 
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+    </FrameLayout>
+<!--
     <android.support.v4.widget.SwipeRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipeContainer"
@@ -47,5 +58,6 @@
 
 
     </android.support.v4.widget.SwipeRefreshLayout>
+    -->
 
 </RelativeLayout><!-- From: file:/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/layout/activity_time_line.xml -->
