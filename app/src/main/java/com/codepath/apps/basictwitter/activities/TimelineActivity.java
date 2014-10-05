@@ -11,6 +11,7 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.widget.SearchView;
 import com.codepath.apps.basictwitter.fragments.HomeFragment;
 import com.codepath.apps.basictwitter.fragments.MentionsFragment;
 import com.codepath.apps.basictwitter.R;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 public class TimelineActivity extends SherlockFragmentActivity {
 
     private static int REQUEST_CODE = 10;
+//    private com.actionbarsherlock.widget.SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

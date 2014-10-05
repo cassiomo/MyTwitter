@@ -10,6 +10,7 @@
     <string name="screen_name">\@foo</string>
     <string name="tweet">Tweet</string>
     <string name="profile">Profile</string>
+    <string name="email">Email</string>
     <string name="tweet_body">This is the tweet body</string>
     <string name="name">name</string>
 

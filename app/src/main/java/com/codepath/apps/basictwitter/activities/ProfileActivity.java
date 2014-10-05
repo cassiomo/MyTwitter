@@ -1,9 +1,12 @@
 package com.codepath.apps.basictwitter.activities;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -13,6 +16,8 @@ import com.codepath.apps.basictwitter.models.Tweet;
 import com.codepath.apps.basictwitter.models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -29,6 +34,7 @@ public class ProfileActivity extends SherlockFragmentActivity {
     private TextView tvFollowingSize;
     private TextView tvTweetsSize;
     private TextView tvFollwersSize;
+    private RelativeLayout rlHeader;
 	private String screenName;
 	private ArrayList<Tweet> tweets;
 	
@@ -42,6 +48,7 @@ public class ProfileActivity extends SherlockFragmentActivity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profile);
+        rlHeader = (RelativeLayout)findViewById(R.id.rlHeader);
 		tvName = (TextView)findViewById(R.id.tvName);
 		tvdescription = (TextView)findViewById(R.id.tvdescription);
         tvFollowing = (TextView)findViewById(R.id.tvFollowing);
@@ -51,7 +58,7 @@ public class ProfileActivity extends SherlockFragmentActivity {
         tvFollwersSize = (TextView)findViewById(R.id.tvFollowersSize);
 		tvFollwers = (TextView)findViewById(R.id.tvFollowers);
 		ivProfileImage = (ImageView)findViewById(R.id.ivProfileImage);
-		
+
 		Log.d("debug", screenName + "");
 
 		TwitterApplication.getRestClient().getUserTimeline(new JsonHttpResponseHandler(){
@@ -70,7 +77,9 @@ public class ProfileActivity extends SherlockFragmentActivity {
                 tvFollowing.setText("Following");
                 tvFollwersSize.setText(user.getFollowers());
 				tvFollwers.setText("Followers");
-				
+
+                //Picasso.with(getApplicationContext()).load(user.getProfileBackgroundImageUrl()).into(target);
+
 				ivProfileImage.setImageResource(0);
 			    ImageLoader imageLoader = ImageLoader.getInstance();
 			    imageLoader.displayImage(user.getProfileImageUrl(), ivProfileImage);
@@ -84,6 +93,33 @@ public class ProfileActivity extends SherlockFragmentActivity {
 		}, 0, screenName);
 		
 	}
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+     // could be in onPause or onStop
+        //Picasso.with(this).cancelRequest(target);
+    }
+
+    private Target target = new Target() {
+        @Override
+        public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+            Drawable drawImage = new BitmapDrawable(
+                    getApplicationContext().getResources(), bitmap);
+            rlHeader.setBackground(drawImage);
+        }
+
+        @Override
+        public void onPrepareLoad(Drawable drawable) {
+
+        }
+
+        @Override
+        public void onBitmapFailed(Drawable drawable) {
+
+        }
+
+    };
 	
 	public String getScreenName(){
 		return screenName;
