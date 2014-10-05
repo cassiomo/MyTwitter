@@ -9,6 +9,7 @@
     <string name="title_activity_time_line">Home</string>
     <string name="screen_name">\@foo</string>
     <string name="tweet">Tweet</string>
+    <string name="profile">Profile</string>
     <string name="tweet_body">This is the tweet body</string>
     <string name="name">name</string>
 

@@ -21,6 +21,8 @@ public class User implements Serializable {
     private String followers;
     private String following;
     private String description;
+    private String profileBackgroundImageUrl;
+    private String location;
 
 //    private User(Parcel in) {
 //        uid = in.readInt();
@@ -46,6 +48,8 @@ public class User implements Serializable {
             u.following = jsonObject.getString("friends_count");
             u.description = jsonObject.getString("description");
             u.profileImageUrl = jsonObject.getString("profile_image_url");
+            u.profileBackgroundImageUrl = jsonObject.getString("profile_background_image_url");
+            u.location = jsonObject.getString("location");
         } catch (JSONException e) {
             e.printStackTrace();
             return null;
@@ -95,6 +99,22 @@ public class User implements Serializable {
 
     public String getProfileImageUrl() {
         return profileImageUrl;
+    }
+
+    public String getProfileBackgroundImageUrl() {
+        return profileBackgroundImageUrl;
+    }
+
+    public void setProfileBackgroundImageUrl(String profileBackgroundImageUrl) {
+        this.profileBackgroundImageUrl = profileBackgroundImageUrl;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     //@Override
