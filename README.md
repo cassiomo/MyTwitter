@@ -50,6 +50,7 @@
 
 ![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/AdvanceTwitter.gif "AdvanceTwitter.gif")
 
+![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/SearchTwitter.gif.gif "SearchTwitter.gif.gif")
 
 <h1> Week 3 Project: Simple Twitter Client</h1>
 
