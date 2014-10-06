@@ -47,7 +47,7 @@ public final class R {
 		public static final int spb_default_sections_count = 0x7f080002;
 	}
 	public static final class string {
-		public static final int spb_default_speed = 0x7f09001a;
+		public static final int spb_default_speed = 0x7f09001c;
 	}
 	public static final class style {
 		public static final int SmoothProgressBar = 0x7f0a0013;

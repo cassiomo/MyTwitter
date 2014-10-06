@@ -54,7 +54,11 @@
         </activity>
         <activity
             android:name="com.codepath.apps.basictwitter.activities.ProfileActivity"
-            android:label="@string/tweet" >
+            android:label="@string/profile" >
+        </activity>
+        <activity
+            android:name="com.codepath.apps.basictwitter.activities.SearchActivity"
+            android:label="@string/search" >
         </activity>
     </application>
 

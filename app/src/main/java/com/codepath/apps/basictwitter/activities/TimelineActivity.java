@@ -11,7 +11,6 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.widget.SearchView;
 import com.codepath.apps.basictwitter.fragments.HomeFragment;
 import com.codepath.apps.basictwitter.fragments.MentionsFragment;
 import com.codepath.apps.basictwitter.R;
@@ -21,13 +20,20 @@ import com.codepath.apps.basictwitter.fragments.TweetsFragment;
 import com.codepath.apps.basictwitter.listeners.FragmentTabListener;
 import com.codepath.apps.basictwitter.listeners.SherlockTabListener;
 import com.codepath.apps.basictwitter.models.Tweet;
+import com.codepath.apps.basictwitter.models.User;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import android.widget.SearchView;
 
+import org.json.JSONArray;
+
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class TimelineActivity extends SherlockFragmentActivity {
 
     private static int REQUEST_CODE = 10;
-//    private com.actionbarsherlock.widget.SearchView searchView;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +53,7 @@ public class TimelineActivity extends SherlockFragmentActivity {
                 .newTab()
                 .setText("Home")
                 .setTag("HomeFragment")
-                .setTabListener(new SherlockTabListener<HomeFragment>(R.id.flContainer, this,
+                .setTabListener(new SherlockTabListener<HomeFragment>(R.id.flTimelineContainer, this,
                         "home", HomeFragment.class));
 
         actionBar.addTab(tab1);
@@ -57,12 +63,12 @@ public class TimelineActivity extends SherlockFragmentActivity {
                 .newTab()
                 .setText("Mentions")
                 .setTag("MentionsFragment")
-                .setTabListener(new SherlockTabListener<MentionsFragment>(R.id.flContainer, this,
+                .setTabListener(new SherlockTabListener<MentionsFragment>(R.id.flTimelineContainer, this,
                         "mentions", MentionsFragment.class));
 //                .setTabListener(new FragmentTabListener<MentionsFragment>(R.id.flContainer, this,
 //                        "mentions", MentionsFragment.class));
         actionBar.addTab(tab2);
-        getSupportFragmentManager().executePendingTransactions();
+        //getSupportFragmentManager().executePendingTransactions();
 
     }
 
@@ -91,6 +97,28 @@ public class TimelineActivity extends SherlockFragmentActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getSupportMenuInflater();
         inflater.inflate(R.menu.main, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        searchView = (SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // perform query here
+                try {
+                    query = java.net.URLEncoder.encode(query, "UTF-8").replace("+", "%20");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                intent.putExtra("query", query);
+                startActivity(intent);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return super.onCreateOptionsMenu(menu);
     }
 

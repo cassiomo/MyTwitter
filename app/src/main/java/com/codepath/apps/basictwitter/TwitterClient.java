@@ -82,7 +82,27 @@ public class TwitterClient extends OAuthBaseClient {
         }
         Log.d("debug", maxId + "");
         client.get(apiUrl, params, handler);
+    }
 
+    public void getSearchQueryResult(JsonHttpResponseHandler handler, String query, long maxId) {
+        //String apiUrl = "https://twitter.com/search?q=" + query;
+        String apiUrl = "https://api.twitter.com/1.1/search/tweets.json?q=" + query;
+        RequestParams params = new RequestParams();
+        params.put("since_id", "1");
+        // passing null if don't have params.
+        // client.get(apiUrl, null, handler);
+        //params.put("since_id", "1");
+        if(maxId > 0){
+            params.put("max_id", maxId + "");
+        }
+        Log.d("debug", maxId + "");
+        //RequestParams params = new RequestParams();
+        //params.put("q", query);
+        //if(maxId > 0){
+        //    params.put("max_id", maxId + "");
+        //}
+        Log.d("debug", maxId + "");
+        client.get(apiUrl, null, handler);
     }
 
 	// CHANGE THIS

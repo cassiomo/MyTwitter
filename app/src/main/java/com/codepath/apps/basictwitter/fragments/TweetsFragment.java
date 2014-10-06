@@ -42,7 +42,6 @@ public class TweetsFragment extends SherlockFragment {
 	private ListView lvTweets;
 	private TwitterClient client;
     private SwipeRefreshLayout swipeContainer;
-    private com.actionbarsherlock.widget.SearchView searchView;
 
     public static TweetsFragment newInstance(int someInt, String someTitle) {
         TweetsFragment tweetsFragment = new TweetsFragment();
@@ -106,21 +105,6 @@ public class TweetsFragment extends SherlockFragment {
                 
             }
         });
-
-//        searchView = (SearchView) searchItem.getActionView();
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                // perform query here
-//                //executeQuery(query);
-//                return true;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                return false;
-//            }
-//        });
 
 		return v;
 	}

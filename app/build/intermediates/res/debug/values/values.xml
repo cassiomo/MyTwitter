@@ -656,6 +656,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="login_label">Connect to Twitter</string>
     <string name="name">name</string>
+    <string name="post">Post</string>
     <string name="profile">Profile</string>
     <!-- From: file:/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values/values.xml -->
     <eat-comment />
@@ -667,6 +668,7 @@
     <eat-comment />
 
     <string name="screen_name">\@foo</string>
+    <string name="search">Search</string>
     <!-- From: file:/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/res/values/values.xml -->
     <eat-comment />
 

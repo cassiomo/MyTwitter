@@ -29,7 +29,7 @@
     tools:context="com.codepath.apps.basictwitter.TimeLineActivity">
 
     <FrameLayout
-        android:id="@+id/flContainer"
+        android:id="@+id/flTimelineContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
