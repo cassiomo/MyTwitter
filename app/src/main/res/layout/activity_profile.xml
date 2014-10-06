@@ -100,6 +100,9 @@
         android:layout_below="@+id/rlHeader"
         android:layout_marginBottom="10dp"
         android:orientation="horizontal"
+        android:divider="@drawable/divider"
+        android:showDividers="middle"
+        android:dividerPadding="22dp"
         android:background="@drawable/border">
 
         <LinearLayout
@@ -134,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
                 android:textColor="#8899a6"
-                android:text="Tweets" />
+                android:text="@string/tweets_profile"/>
 
         </LinearLayout>
 
@@ -163,7 +166,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Following"
+                android:text="@string/following_profile"
                 android:textSize="12dp"
                 android:textColor="#8899a6"
                 android:id="@+id/tvFollowing" />
@@ -194,7 +197,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Followers"
+                android:text="@string/follower_profile"
                 android:textSize="12dp"
                 android:textColor="#8899a6"
                 android:id="@+id/tvFollowers" />

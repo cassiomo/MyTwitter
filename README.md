@@ -9,21 +9,21 @@
 <li>User can switch between Timeline and Mention views using tabs.
 
 <ul>
-<li>User can view their home timeline tweets.</li>
-<li>User can view the recent mentions of their username.</li>
-<li>User can scroll to bottom of either of these lists and new tweets will load ("infinite scroll")</li>
+<li>[x]User can view their home timeline tweets.</li>
+<li>[x]User can view the recent mentions of their username.</li>
+<li>[x]User can scroll to bottom of either of these lists and new tweets will load ("infinite scroll")</li>
 <li><strong>Optional:</strong> Implement tabs in a <a href="http://guides.codepath.com/android/ActionBar-Tabs-with-Fragments#with-actionbaractivity-support">gingerbread-compatible approach</a></li>
 </ul></li>
-<li>User can navigate to <strong>view their own profile</strong>
+<li>[x]User can navigate to <strong>view their own profile</strong>
 
 <ul>
-<li>User can see picture, tagline, # of followers, # of following, and tweets on their profile.</li>
+<li>[x]User can see picture, tagline, # of followers, # of following, and tweets on their profile.</li>
 </ul></li>
-<li>User can <strong>click on the profile image</strong> in any tweet to see <strong>another user's</strong> profile.
+<li>[x]User can <strong>click on the profile image</strong> in any tweet to see <strong>another user's</strong> profile.
 
 <ul>
-<li>User can see picture, tagline, # of followers, # of following, and tweets of clicked user.</li>
-<li>Profile view should include that user's timeline</li>
+<li>[x]User can see picture, tagline, # of followers, # of following, and tweets of clicked user.</li>
+<li>[x]Profile view should include that user's timeline</li>
 <li><strong>Optional:</strong> User can view following / followers list through the profile</li>
 </ul></li>
 </ul>
@@ -31,8 +31,8 @@
 <p>The following advanced user stories are <strong>optional</strong>:</p>
 
 <ul>
-<li><strong>Advanced:</strong> Robust error handling, <a href="http://guides.codepath.com/android/Sending-and-Managing-Network-Requests#checking-for-network-connectivity">check if internet is available</a>, handle error cases, network failures</li>
-<li><strong>Advanced:</strong> When a network request is sent, user sees an <a href="http://guides.codepath.com/android/Handling-ProgressBars#actionbar-progress-bar">indeterminate progress indicator</a></li>
+<li><strong>[x]Advanced:</strong> Robust error handling, <a href="http://guides.codepath.com/android/Sending-and-Managing-Network-Requests#checking-for-network-connectivity">check if internet is available</a>, handle error cases, network failures</li>
+<li><strong>[x]Advanced:</strong> When a network request is sent, user sees an <a href="http://guides.codepath.com/android/Handling-ProgressBars#actionbar-progress-bar">indeterminate progress indicator</a></li>
 <li><strong>Advanced:</strong> User can "reply" to any tweet on their home timeline
 
 <ul>
@@ -43,7 +43,7 @@
 <ul>
 <li><strong>Advanced:</strong> User can take favorite (and unfavorite) or reweet actions on a tweet</li>
 </ul></li>
-<li><strong>Advanced:</strong> Improve the user interface and theme the app to feel twitter branded</li>
+<li><strong>[x]Advanced:</strong> Improve the user interface and theme the app to feel twitter branded</li>
 <li><strong>Advanced</strong>: User can search for tweets matching a particular query and see results</li>
 <li><strong>Bonus:</strong> User can view their direct messages (or send new ones)</li>
 </ul>

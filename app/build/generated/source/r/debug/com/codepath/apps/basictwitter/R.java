@@ -1105,14 +1105,15 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006e;
         public static final int abs__toast_frame=0x7f02006f;
         public static final int border=0x7f020070;
-        public static final int ic_background=0x7f020071;
-        public static final int ic_email=0x7f020072;
-        public static final int ic_home=0x7f020073;
-        public static final int ic_launcher=0x7f020074;
-        public static final int ic_profile=0x7f020075;
-        public static final int ic_search=0x7f020076;
-        public static final int ic_tweet=0x7f020077;
-        public static final int ic_tweet_white=0x7f020078;
+        public static final int divider=0x7f020071;
+        public static final int ic_background=0x7f020072;
+        public static final int ic_email=0x7f020073;
+        public static final int ic_home=0x7f020074;
+        public static final int ic_launcher=0x7f020075;
+        public static final int ic_profile=0x7f020076;
+        public static final int ic_search=0x7f020077;
+        public static final int ic_tweet=0x7f020078;
+        public static final int ic_tweet_white=0x7f020079;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f060029;
@@ -1262,19 +1263,22 @@ containing a value of this type.
         public static final int action_settings=0x7f09000d;
         public static final int app_name=0x7f09000e;
         public static final int email=0x7f09000f;
-        public static final int hello_world=0x7f090010;
-        public static final int login_label=0x7f090011;
-        public static final int name=0x7f090012;
-        public static final int profile=0x7f090013;
-        public static final int pull_to_refresh_pull_label=0x7f090014;
-        public static final int pull_to_refresh_refreshing_label=0x7f090015;
-        public static final int pull_to_refresh_release_label=0x7f090016;
-        public static final int screen_name=0x7f090017;
-        public static final int spb_default_speed=0x7f090018;
-        public static final int title_activity_photos=0x7f090019;
-        public static final int title_activity_time_line=0x7f09001a;
-        public static final int tweet=0x7f09001b;
-        public static final int tweet_body=0x7f09001c;
+        public static final int follower_profile=0x7f090010;
+        public static final int following_profile=0x7f090011;
+        public static final int hello_world=0x7f090012;
+        public static final int login_label=0x7f090013;
+        public static final int name=0x7f090014;
+        public static final int profile=0x7f090015;
+        public static final int pull_to_refresh_pull_label=0x7f090016;
+        public static final int pull_to_refresh_refreshing_label=0x7f090017;
+        public static final int pull_to_refresh_release_label=0x7f090018;
+        public static final int screen_name=0x7f090019;
+        public static final int spb_default_speed=0x7f09001a;
+        public static final int title_activity_photos=0x7f09001b;
+        public static final int title_activity_time_line=0x7f09001c;
+        public static final int tweet=0x7f09001d;
+        public static final int tweet_body=0x7f09001e;
+        public static final int tweets_profile=0x7f09001f;
     }
     public static final class style {
         /** 

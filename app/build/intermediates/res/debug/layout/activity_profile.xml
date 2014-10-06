@@ -100,6 +100,9 @@
         android:layout_below="@+id/rlHeader"
         android:layout_marginBottom="10dp"
         android:orientation="horizontal"
+        android:divider="@drawable/divider"
+        android:showDividers="middle"
+        android:dividerPadding="22dp"
         android:background="@drawable/border">
 
         <LinearLayout
@@ -111,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tweets Size"
-                android:textSize="12dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 android:id="@+id/tvTweetsSize" />
             <!--
@@ -132,9 +135,9 @@
                 android:id="@+id/tvTweets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textColor="#8899a6"
-                android:text="Tweets" />
+                android:text="@string/tweets_profile"/>
 
         </LinearLayout>
 
@@ -156,15 +159,15 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="Following Size"
-                android:textSize="12dp"
+                android:textSize="15dp"
                 android:id="@+id/tvFollowingSize" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Following"
-                android:textSize="8dp"
+                android:text="@string/following_profile"
+                android:textSize="12dp"
                 android:textColor="#8899a6"
                 android:id="@+id/tvFollowing" />
 <!--
@@ -187,15 +190,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="12dp"
+                android:textSize="15dp"
                 android:text="Followers Size"
                 android:id="@+id/tvFollowersSize" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Followers"
-                android:textSize="8dp"
+                android:text="@string/follower_profile"
+                android:textSize="12dp"
                 android:textColor="#8899a6"
                 android:id="@+id/tvFollowers" />
         </LinearLayout>
