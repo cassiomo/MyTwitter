@@ -5,8 +5,8 @@
 <p>The following user stories <strong>must</strong> be completed:</p>
 
 <ul>
-<li>Includes <strong>all required user stories</strong> from Week 3 Twitter Client</li>
-<li>User can switch between Timeline and Mention views using tabs.
+<li>[x]Includes <strong>all required user stories</strong> from Week 3 Twitter Client</li>
+<li>[x]User can switch between Timeline and Mention views using tabs.
 
 <ul>
 <li>[x]User can view their home timeline tweets.</li>
