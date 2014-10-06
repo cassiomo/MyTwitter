@@ -44,7 +44,7 @@
 <li><strong>Advanced:</strong> User can take favorite (and unfavorite) or reweet actions on a tweet</li>
 </ul></li>
 <li><strong>[x]Advanced:</strong> Improve the user interface and theme the app to feel twitter branded</li>
-<li><strong>Advanced</strong>: User can search for tweets matching a particular query and see results</li>
+<li><strong>[x]Advanced</strong>: User can search for tweets matching a particular query and see results</li>
 <li><strong>Bonus:</strong> User can view their direct messages (or send new ones)</li>
 </ul>
 
