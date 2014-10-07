@@ -46,6 +46,8 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
             @Override
             public void onClick(View v) {
                 LayoutInflater inflater = LayoutInflater.from(getContext());
+                v.setFocusable(true);
+                v.setFocusableInTouchMode(true);
                 Intent i = new Intent(inflater.getContext(), ProfileActivity.class);
                 String screenName = (String)ivProfileImage.getTag();
                 i.putExtra("screenName", screenName);

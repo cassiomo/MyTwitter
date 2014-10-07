@@ -38,15 +38,18 @@
 <ul>
 <li>The user that wrote the original tweet is automatically "@" replied in compose</li>
 </ul></li>
-<li><strong>Advanced:</strong> User can click on a tweet to be taken to a "detail view" of that tweet
+<li><strong>[x]Advanced:</strong> User can click on a tweet to be taken to a "detail view" of that tweet
 
 <ul>
 <li><strong>Advanced:</strong> User can take favorite (and unfavorite) or reweet actions on a tweet</li>
 </ul></li>
 <li><strong>[x]Advanced:</strong> Improve the user interface and theme the app to feel twitter branded</li>
 <li><strong>[x]Advanced</strong>: User can search for tweets matching a particular query and see results</li>
+
 <li><strong>Bonus:</strong> User can view their direct messages (or send new ones)</li>
 </ul>
+
+![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/detailview.gif "detailview.gif")
 
 ![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/AdvanceTwitter.gif "AdvanceTwitter.gif")
 

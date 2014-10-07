@@ -15,10 +15,10 @@
     <string name="email">Email</string>
     <string name="tweet_body">This is the tweet body</string>
     <string name="name">name</string>
-
     <string name="tweets_profile">TWEETS</string>
     <string name="following_profile">FOLLOWING</string>
     <string name="follower_profile">FOLLOWERS</string>
     <string name="reply_label">reply</string>
+    <string name="title_activity_tweet_detail">Tweet Detail</string>
 
 </resources>

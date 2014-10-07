@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.codepath.apps.basictwitter.TwitterApplication"
+        android:name=".TwitterApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -59,6 +59,10 @@
         <activity
             android:name=".activities.SearchActivity"
             android:label="@string/search" >
+        </activity>
+        <activity
+            android:name=".activities.TweetDetailActivity"
+            android:label="@string/title_activity_tweet_detail" >
         </activity>
     </application>
 

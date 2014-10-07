@@ -5148,6 +5148,11 @@ false
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_tweet_detail"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/layout/activity_tweet_detail.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="fragment_tweets_list"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/layout/fragment_tweets_list.xml"
                 qualifiers=""
@@ -5188,6 +5193,11 @@ false
                 qualifiers=""
                 type="menu" />
             <file
+                name="tweet_detail"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/menu/tweet_detail.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
@@ -5209,6 +5219,8 @@ false
                 <string name="email" >Email
                 </string>
                 <string name="profile" >Profile
+                </string>
+                <string name="title_activity_tweet_detail" >Tweet Detail
                 </string>
                 <string name="title_activity_photos" >Flickr Photos
                 </string>
@@ -5353,6 +5365,12 @@ false
 
                     <!-- API 14 theme customizations can go here. -->
                 </style>
+            </file>
+            <file
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/values-w820dp/dimens.xml"
+                qualifiers="w820dp-v13" >
+                <dimen name="activity_horizontal_margin" >64dp
+                </dimen>
             </file>
         </source>
         <source path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/generated/res/rs/debug" />

@@ -24,6 +24,7 @@ import com.actionbarsherlock.widget.SearchView;
 import com.codepath.apps.basictwitter.R;
 import com.codepath.apps.basictwitter.TwitterClient;
 import com.codepath.apps.basictwitter.activities.ProfileActivity;
+import com.codepath.apps.basictwitter.activities.TweetDetailActivity;
 import com.codepath.apps.basictwitter.adapters.TweetArrayAdapter;
 import com.codepath.apps.basictwitter.listeners.EndlessScrollListener;
 import com.codepath.apps.basictwitter.models.Tweet;
@@ -92,17 +93,24 @@ public class TweetsFragment extends SherlockFragment {
 		    	aTweets.notifyDataSetChanged();
 		    }			
 	    });
+//
+//        lvTweets.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.i("Debug", "Testing");
+//            }
+//        });
 		
 		lvTweets.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                     long id) {
-                                
+                view.setFocusable(true);
+                view.setFocusableInTouchMode(true);
             	Tweet tweet = tweets.get(position);
-            	Intent i = new Intent(inflater.getContext(), ProfileActivity.class);
-            	i.putExtra("screenName", tweet.getUser().getScreenName()); 
+            	Intent i = new Intent(inflater.getContext(), TweetDetailActivity.class);
+                i.putExtra("tweet", tweet);
         		startActivity(i);
-                
             }
         });
 

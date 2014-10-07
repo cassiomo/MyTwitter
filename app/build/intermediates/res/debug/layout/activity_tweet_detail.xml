@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.codepath.apps.basictwitter.activities.TweetDetailActivity">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/ivDetailProfileImage"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:id="@+id/tvDetailName"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivDetailProfileImage"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_name"
+        android:textSize="8dp"
+        android:id="@+id/tvDetailScreenName"
+        android:layout_alignBottom="@+id/tvDetailName"
+        android:layout_marginLeft="1dp"
+        android:textColor="#8899a6"
+        android:layout_toRightOf="@+id/tvDetailName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet_body"
+        android:id="@+id/tvDetailBody"
+        android:layout_marginLeft="5dp"
+        android:textSize="12dp"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:focusable="false"
+        android:layout_below="@+id/tvDetailName"
+        android:layout_toRightOf="@+id/ivDetailProfileImage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="12dp"
+        android:paddingTop="2dp"
+        android:paddingRight="5dp"
+        android:id="@+id/tvDetailCreateAt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#8899a6"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivDetailBody"
+        android:layout_below="@+id/tvDetailBody"
+        android:layout_alignLeft="@+id/tvDetailBody"
+        android:layout_alignStart="@+id/tvDetailBody" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ivDetailBody"
+        android:layout_alignLeft="@+id/ivDetailBody"
+        android:layout_alignStart="@+id/ivDetailBody"
+        android:weightSum="1"
+        android:id="@+id/linearLayout2">
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:id="@+id/ivDetailReply"
+            android:src="@drawable/ic_reply" />
+
+        <TextView
+            android:layout_width="29dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDetailReply" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:id="@+id/ivDetailRetweet"
+            android:src="@drawable/ic_retweetcount" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDetailRetweet"
+            android:layout_weight="0.10" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:id="@+id/ivDetailfavorite"
+            android:src="@drawable/ic_favoritecount" />
+
+        <TextView
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDetailFavorite"
+            android:layout_weight="0.08" />
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- From: file:/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/layout/activity_tweet_detail.xml -->
