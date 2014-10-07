@@ -1,5 +1,7 @@
 <h1> Week 4 Project: Twitter with Fragments</h1>
 
+<h3>Time Spent: 20 hours </h3>
+
 <p><strong>User Stories</strong>:</p>
 
 <p>The following user stories <strong>must</strong> be completed:</p>
