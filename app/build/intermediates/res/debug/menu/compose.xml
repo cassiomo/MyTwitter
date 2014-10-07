@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.codepath.apps.basictwitter.activities.ComposeActivity" >
+
+    <!--
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+        -->
+
+    <item android:id="@+id/iComposeTweetLength"
+        android:title="140"
+        android:showAsAction="always" />
+
+    <item android:id="@+id/iComposeTweet"
+        android:title="TWEET"
+        android:onClick="onPostReply"
+        android:showAsAction="always" />
+</menu>
+<!-- From: file:/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/menu/compose.xml -->

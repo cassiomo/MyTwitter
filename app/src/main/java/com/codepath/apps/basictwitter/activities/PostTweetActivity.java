@@ -93,24 +93,29 @@ public class PostTweetActivity extends SherlockFragmentActivity {
         newTweet.setCreatedAt(System.currentTimeMillis() + "");
         newTweet.setUid(1);
 
-        client.postStatus(etStatus.getText().toString(), new JsonHttpResponseHandler(){
-            @Override
-            public void onSuccess(JSONObject json) {
-                Toast.makeText(getApplicationContext(), "Tweet posted", Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onFailure(Throwable arg0, String arg1) {
-                // TODO Auto-generated method stub
-                Log.d("debug", arg0.toString());
-                Log.d("debug", arg1.toString());
-                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
-            }
-        });
+        if (etStatus.getText().length() > 0) {
+            client.postStatus(etStatus.getText().toString(), new JsonHttpResponseHandler() {
+                @Override
+                public void onSuccess(JSONObject json) {
+                    Toast.makeText(getApplicationContext(), "Tweet posted", Toast.LENGTH_SHORT).show();
+                }
 
-        Intent data = new Intent();
-        data.putExtra("tweet", newTweet);
-        setResult(RESULT_OK, data);
-        finish();
+                @Override
+                public void onFailure(Throwable arg0, String arg1) {
+                    // TODO Auto-generated method stub
+                    Log.d("debug", arg0.toString());
+                    Log.d("debug", arg1.toString());
+                    Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            Intent data = new Intent();
+            data.putExtra("tweet", newTweet);
+            setResult(RESULT_OK, data);
+            finish();
+        } else {
+            Toast.makeText(getApplicationContext(), "Please enter text", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void getUserInfo(){

@@ -7,11 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codepath.apps.basictwitter.R;
+import com.codepath.apps.basictwitter.activities.ComposeActivity;
 import com.codepath.apps.basictwitter.activities.ProfileActivity;
 import com.codepath.apps.basictwitter.activities.TimelineActivity;
 import com.codepath.apps.basictwitter.models.Tweet;
@@ -30,7 +32,7 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         //return super.getView(position, convertView, parent);
-        Tweet tweet = getItem(position);
+        final Tweet tweet = getItem(position);
         View v;
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
@@ -48,11 +50,25 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
                 LayoutInflater inflater = LayoutInflater.from(getContext());
                 v.setFocusable(true);
                 v.setFocusableInTouchMode(true);
+
                 Intent i = new Intent(inflater.getContext(), ProfileActivity.class);
                 String screenName = (String)ivProfileImage.getTag();
                 i.putExtra("screenName", screenName);
                 v.getContext().startActivity(i);
                 Log.i("debug", "testing");
+            }
+        });
+
+        Button btReply = (Button)v.findViewById(R.id.btReply);
+        btReply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater inflater = LayoutInflater.from(getContext());
+                v.setFocusable(true);
+                v.setFocusableInTouchMode(true);
+                Intent i = new Intent(inflater.getContext(), ComposeActivity.class);
+                i.putExtra("tweet", tweet);
+                v.getContext().startActivity(i);
             }
         });
 

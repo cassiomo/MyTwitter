@@ -3,6 +3,7 @@ package com.codepath.apps.basictwitter;
 import android.content.Context;
 import android.util.Log;
 
+import com.codepath.apps.basictwitter.models.Tweet;
 import com.codepath.oauth.OAuthBaseClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -57,6 +58,18 @@ public class TwitterClient extends OAuthBaseClient {
             params.put("max_id", maxId + "");
         }
         Log.d("debug", maxId + "");
+        client.get(apiUrl, params, handler);
+    }
+
+    //https://api.twitter.com/1.1/statuses/update.json
+
+    public void postReply(String status, long inReplyId, AsyncHttpResponseHandler handler){
+        String apiUrl = getApiUrl("statuses/update.json");
+        RequestParams params = new RequestParams();
+        params.put("status", status);
+        if (inReplyId > 0) {
+            params.put("in_reply_to_status_id",String.valueOf(inReplyId));
+        }
         client.get(apiUrl, params, handler);
     }
 

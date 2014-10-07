@@ -252,13 +252,12 @@ false
                         format="reference" />
                 </declare-styleable>
 
-                <string name="pull_to_refresh_pull_label" >Pull to refresh…
-                </string>
-
                 <item
                     name="ptr_progress"
                     type="id"/>
 
+                <string name="pull_to_refresh_pull_label" >Pull to refresh…
+                </string>
                 <string name="pull_to_refresh_release_label" >Release to refresh…
                 </string>
 
@@ -280,19 +279,19 @@ false
                     name="ptr_content"
                     type="id"/>
 
-                <dimen name="ptr_progress_bar_stroke_width" >4dp
-                </dimen>
-
                 <attr
                     name="ptrHeaderStyle"
                     format="reference" />
+
+                <dimen name="ptr_progress_bar_stroke_width" >4dp
+                </dimen>
             </file>
             <file
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-ar/values.xml"
                 qualifiers="ar" >
-                <string name="pull_to_refresh_release_label" >اترك للتحديث…
-                </string>
                 <string name="pull_to_refresh_pull_label" >اسحب للتحديث…
+                </string>
+                <string name="pull_to_refresh_release_label" >اترك للتحديث…
                 </string>
                 <string name="pull_to_refresh_refreshing_label" >تحميل…
                 </string>
@@ -322,9 +321,9 @@ false
                 qualifiers="el" >
                 <string name="pull_to_refresh_release_label" >Αφήστε για ανανέωση…
                 </string>
-                <string name="pull_to_refresh_refreshing_label" >Φόρτωση…
-                </string>
                 <string name="pull_to_refresh_pull_label" >Σύρετε προς τα κάτω για ανανέωση…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Φόρτωση…
                 </string>
             </file>
             <file
@@ -410,9 +409,9 @@ false
             <file
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-lt/values.xml"
                 qualifiers="lt" >
-                <string name="pull_to_refresh_release_label" >Paleiskite, kad atnaujinti…
-                </string>
                 <string name="pull_to_refresh_refreshing_label" >Kraunama…
+                </string>
+                <string name="pull_to_refresh_release_label" >Paleiskite, kad atnaujinti…
                 </string>
                 <string name="pull_to_refresh_pull_label" >Traukite, kad atnaujinti…
                 </string>
@@ -502,9 +501,9 @@ false
                 qualifiers="tr" >
                 <string name="pull_to_refresh_release_label" >Yenilemek için bırakın…
                 </string>
-                <string name="pull_to_refresh_refreshing_label" >Yükleniyor…
-                </string>
                 <string name="pull_to_refresh_pull_label" >Yenilemek için kaydırın…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Yükleniyor…
                 </string>
             </file>
             <file
@@ -2249,6 +2248,10 @@ bold
                     parent="@android:style/TextAppearance" />
 
                 <style
+                    name="Widget.Sherlock.Light.ActionButton"
+                    parent="Widget.Sherlock.ActionButton" />
+
+                <style
                     name="Widget.Sherlock.Light.ListPopupWindow"
                     parent="Widget" >
                     <item name="android:dropDownSelector">
@@ -2268,9 +2271,11 @@ wrap_content
                     </item>
                 </style>
 
-                <style
-                    name="Widget.Sherlock.Light.ActionButton"
-                    parent="Widget.Sherlock.ActionButton" />
+                <style name="TextAppearance.Sherlock.Light.SearchResult.Title" >
+                    <item name="android:textSize">
+18sp
+                    </item>
+                </style>
 
                 <style
                     name="Widget.Sherlock.TextView.SpinnerItem"
@@ -2283,12 +2288,6 @@ wrap_content
                     </item>
                     <item name="android:paddingRight">
 8dp
-                    </item>
-                </style>
-
-                <style name="TextAppearance.Sherlock.Light.SearchResult.Title" >
-                    <item name="android:textSize">
-18sp
                     </item>
                 </style>
 
@@ -2305,6 +2304,10 @@ wrap_content
 ?android:attr/textColorPrimaryInverse
                     </item>
                 </style>
+
+                <attr
+                    name="subtitleTextStyle"
+                    format="reference" />
 
                 <style
                     name="Theme.Sherlock.Light.DarkActionBar"
@@ -2402,10 +2405,6 @@ wrap_content
 @drawable/abs__ic_commit_search_api_holo_dark
                     </item>
                 </style>
-
-                <attr
-                    name="subtitleTextStyle"
-                    format="reference" />
 
                 <style
                     name="Widget.Sherlock.Light.ProgressBar.Horizontal"
@@ -3794,6 +3793,10 @@ false
                 </string>
 
                 <style
+                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
+                    parent="TextAppearance.Sherlock.Widget.PopupMenu.Large" />
+
+                <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
                     parent="Sherlock.__Widget.SearchAutoCompleteTextView" >
                     <item name="android:dropDownSelector">
@@ -3804,29 +3807,14 @@ false
                     </item>
                 </style>
 
-                <style
-                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
-                    parent="TextAppearance.Sherlock.Widget.PopupMenu.Large" />
-
-                <color name="abs__bright_foreground_disabled_holo_light" >#ffb2b2b2
-                </color>
-
                 <style name="TextAppearance.Sherlock.Widget.PopupMenu.Large" >
                     <item name="android:textSize">
 18sp
                     </item>
                 </style>
 
-                <style
-                    name="TextAppearance.Sherlock.Widget.DropDownHint"
-                    parent="Widget" >
-                    <item name="android:textColor">
-?textColorPrimary
-                    </item>
-                    <item name="android:textSize">
-14sp
-                    </item>
-                </style>
+                <color name="abs__bright_foreground_disabled_holo_light" >#ffb2b2b2
+                </color>
 
                 <style
                     name="Theme.Sherlock"
@@ -4012,6 +4000,17 @@ false
                     </item>
                 </style>
 
+                <style
+                    name="TextAppearance.Sherlock.Widget.DropDownHint"
+                    parent="Widget" >
+                    <item name="android:textColor">
+?textColorPrimary
+                    </item>
+                    <item name="android:textSize">
+14sp
+                    </item>
+                </style>
+
                 <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
 
@@ -4023,14 +4022,6 @@ false
                     </item>
                     <item name="android:textColor">
 ?android:attr/textColorSecondary
-                    </item>
-                </style>
-
-                <style
-                    name="Widget.Sherlock.Spinner.DropDown.ActionBar"
-                    parent="Sherlock.__Widget.Holo.Spinner" >
-                    <item name="android:background">
-@drawable/abs__spinner_ab_holo_dark
                     </item>
                 </style>
 
@@ -4067,6 +4058,14 @@ false
                     </item>
                 </style>
 
+                <style
+                    name="Widget.Sherlock.Spinner.DropDown.ActionBar"
+                    parent="Sherlock.__Widget.Holo.Spinner" >
+                    <item name="android:background">
+@drawable/abs__spinner_ab_holo_dark
+                    </item>
+                </style>
+
                 <bool name="abs__config_actionMenuItemAllCaps" >
 true
                 </bool>
@@ -4082,6 +4081,17 @@ true
                 <style
                     name="TextAppearance.Sherlock.Small"
                     parent="Sherlock.__TextAppearance.Small" />
+
+                <style
+                    name="Sherlock.__Widget.Holo.ListView"
+                    parent="android:Widget.ListView" >
+                    <item name="android:divider">
+@drawable/abs__list_divider_holo_dark
+                    </item>
+                    <item name="android:listSelector">
+@drawable/abs__list_selector_holo_dark
+                    </item>
+                </style>
 
                 <style
                     name="Widget.Sherlock.ActionButton"
@@ -4106,17 +4116,6 @@ center
                     </item>
                     <item name="android:scaleType">
 center
-                    </item>
-                </style>
-
-                <style
-                    name="Sherlock.__Widget.Holo.ListView"
-                    parent="android:Widget.ListView" >
-                    <item name="android:divider">
-@drawable/abs__list_divider_holo_dark
-                    </item>
-                    <item name="android:listSelector">
-@drawable/abs__list_selector_holo_dark
                     </item>
                 </style>
 
@@ -4230,24 +4229,6 @@ marquee
                     type="id"/>
 
                 <style
-                    name="Widget.Sherlock.ProgressBar.Horizontal"
-                    parent="android:Widget.ProgressBar.Horizontal" >
-                    <item name="android:progressDrawable">
-@drawable/abs__progress_horizontal_holo_dark
-                    </item>
-                    <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
-                    <item name="android:minHeight">
-16dip
-                    </item>
-                    <item name="android:maxHeight">
-16dip
-                    </item>
-                </style>
-
-                <string name="abs__action_menu_overflow_description" >More options
-                </string>
-
-                <style
                     name="Sherlock.__Widget.Holo.DropDownItem"
                     parent="Widget" >
                     <item name="android:textAppearance">
@@ -4261,6 +4242,24 @@ marquee
                     </item>
                     <item name="android:gravity">
 center_vertical
+                    </item>
+                </style>
+
+                <string name="abs__action_menu_overflow_description" >More options
+                </string>
+
+                <style
+                    name="Widget.Sherlock.ProgressBar.Horizontal"
+                    parent="android:Widget.ProgressBar.Horizontal" >
+                    <item name="android:progressDrawable">
+@drawable/abs__progress_horizontal_holo_dark
+                    </item>
+                    <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
+                    <item name="android:minHeight">
+16dip
+                    </item>
+                    <item name="android:maxHeight">
+16dip
                     </item>
                 </style>
 
@@ -4312,6 +4311,8 @@ center_vertical
 
                 <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
+                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
+                </dimen>
 
                 <style name="Theme.Sherlock.Light.NoActionBar" >
                     <item name="windowActionBar">
@@ -4321,9 +4322,6 @@ false
 true
                     </item>
                 </style>
-
-                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
-                </dimen>
 
                 <style
                     name="Widget.Sherlock.Light.Button.Small"
@@ -4354,10 +4352,6 @@ normal
                     </item>
                 </style>
 
-                <style
-                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
-                    parent="Sherlock.__Widget.Holo.DropDownItem" />
-
                 <style name="TextAppearance.Sherlock.SearchResult.Subtitle" >
                     <item name="android:textSize">
 14sp
@@ -4366,6 +4360,10 @@ normal
 ?android:attr/textColorSecondary
                     </item>
                 </style>
+
+                <style
+                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
+                    parent="Sherlock.__Widget.Holo.DropDownItem" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionMode.Inverse"
@@ -4407,10 +4405,6 @@ wrap_content
                 </style>
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.TabText"
-                    parent="Widget.Sherlock.ActionBar.TabText" />
-
-                <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Title"
                     parent="Widget" >
                     <item name="android:textSize">
@@ -4420,6 +4414,10 @@ wrap_content
 ?android:attr/textColorPrimary
                     </item>
                 </style>
+
+                <style
+                    name="Widget.Sherlock.Light.ActionBar.TabText"
+                    parent="Widget.Sherlock.ActionBar.TabText" />
 
                 <bool name="abs__config_showMenuShortcutsWhenKeyboardPresent" >
 false
@@ -4436,9 +4434,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >40dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
                 <dimen name="abs__action_bar_title_text_size" >16dp
                 </dimen>
@@ -4456,9 +4454,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
             </file>
             <file
@@ -4472,9 +4470,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >4dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
             </file>
             <file
@@ -4504,9 +4502,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
                 </dimen>
                 <dimen name="abs__action_bar_title_text_size" >18dp
                 </dimen>
@@ -4514,12 +4512,13 @@ false
             <file
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/res/values-sw600dp/values.xml"
                 qualifiers="sw600dp-v13" >
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
+
                 <integer name="abs__max_action_buttons" >
 5
                 </integer>
 
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
@@ -4643,24 +4642,24 @@ false
                     parent="android:Widget.Holo.Spinner" />
 
                 <style
-                    name="Widget.Sherlock.ActionBar.TabView"
-                    parent="android:Widget.Holo.ActionBar.TabView" />
-
-                <style
                     name="TextAppearance.Sherlock.Widget.PopupMenu"
                     parent="android:TextAppearance.Holo.Widget.PopupMenu" />
+
+                <style
+                    name="Widget.Sherlock.ActionBar.TabView"
+                    parent="android:Widget.Holo.ActionBar.TabView" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionButton.Overflow"
                     parent="android:Widget.Holo.Light.ActionButton.Overflow" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.TabView"
-                    parent="android:Widget.Holo.Light.ActionBar.TabView" />
-
-                <style
                     name="Widget.Sherlock.Light.ProgressBar"
                     parent="android:Widget.Holo.Light.ProgressBar" />
+
+                <style
+                    name="Widget.Sherlock.Light.ActionBar.TabView"
+                    parent="android:Widget.Holo.Light.ActionBar.TabView" />
 
                 <style
                     name="Sherlock.__Theme"
@@ -4793,32 +4792,32 @@ true
                     parent="android:Widget.Holo.ListView.DropDown" />
 
                 <style
-                    name="Widget.Sherlock.ProgressBar.Horizontal"
-                    parent="android:Widget.Holo.ProgressBar.Horizontal" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar"
                     parent="android:Widget.Holo.Light.ActionBar" />
+
+                <style
+                    name="Widget.Sherlock.ProgressBar.Horizontal"
+                    parent="android:Widget.Holo.ProgressBar.Horizontal" />
 
                 <style
                     name="Widget.Sherlock.Light.SearchAutoCompleteTextView"
                     parent="android:Widget.Holo.Light.AutoCompleteTextView" />
 
                 <style
-                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
-                    parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar.Solid"
                     parent="android:Widget.Holo.Light.ActionBar.Solid" />
 
                 <style
-                    name="TextAppearance.Sherlock.Widget.ActionMode.Title"
-                    parent="android:TextAppearance.Holo.Widget.ActionMode.Title" />
+                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
+                    parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
                     parent="android:TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+                <style
+                    name="TextAppearance.Sherlock.Widget.ActionMode.Title"
+                    parent="android:TextAppearance.Holo.Widget.ActionMode.Title" />
 
                 <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
@@ -4863,29 +4862,29 @@ false
                 qualifiers="xlarge-v4" >
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
-                </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
                 <dimen name="abs__action_bar_title_text_size" >18dp
                 </dimen>
+                <dimen name="abs__action_button_min_width" >64dip
+                </dimen>
 
-                <item
-                    name="abs__dialog_min_width_minor"
-                    type="dimen">
-72%
-                </item>
                 <item
                     name="abs__dialog_min_width_major"
                     type="dimen">
 45%
                 </item>
+                <item
+                    name="abs__dialog_min_width_minor"
+                    type="dimen">
+72%
+                </item>
 
-                <dimen name="abs__action_button_min_width" >64dip
+                <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
-                <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
             </file>
         </source>
@@ -5232,19 +5231,21 @@ false
                 </string>
                 <string name="post" >Post
                 </string>
+                <string name="title_activity_compose" >ComposeActivity
+                </string>
                 <string name="app_name" >MySimpleTwitter
                 </string>
-                <string name="tweets_profile" >TWEETS
-                </string>
                 <string name="name" >name
+                </string>
+                <string name="tweets_profile" >TWEETS
                 </string>
                 <string name="tweet_body" >This is the tweet body
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
-                <string name="follower_profile" >FOLLOWERS
-                </string>
                 <string name="tweet" >Tweet
+                </string>
+                <string name="follower_profile" >FOLLOWERS
                 </string>
             </file>
             <file
@@ -5271,15 +5272,6 @@ false
                 </style>
 
                 <style
-                    name="MyActionBarTabText"
-                    parent="@android:style/Widget.ActionBar.TabText" >
-                    <item name="android:textColor">
-#55ACEE
-                    </item>
-                    <!-- The textColor property is backward compatible with the Support Library -->
-                </style>
-
-                <style
                     name="AppThemeNewTweet"
                     parent="@android:style/Widget.Holo.Light.ActionBar" >
 
@@ -5290,6 +5282,15 @@ false
                     <item name="android:actionMenuTextColor">
 #55ACEE
                     </item>
+                </style>
+
+                <style
+                    name="MyActionBarTabText"
+                    parent="@android:style/Widget.ActionBar.TabText" >
+                    <item name="android:textColor">
+#55ACEE
+                    </item>
+                    <!-- The textColor property is backward compatible with the Support Library -->
                 </style>
 
                 <style
@@ -5312,6 +5313,16 @@ false
                 </style>
 
                 <style
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                    <item name="android:actionBarStyle">
+@style/MyActionBar
+                    </item>
+                </style>
+
+                <style
                     name="MyActionBar"
                     parent="@android:style/Widget.Holo.Light.ActionBar" >
                     <item name="android:background">
@@ -5325,16 +5336,6 @@ false
                     </item>
                     <item name="android:actionBarTabTextStyle">
 @style/MyActionBarTabText
-                    </item>
-                </style>
-
-                <style
-                    name="AppTheme"
-                    parent="AppBaseTheme" >
-
-                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-                    <item name="android:actionBarStyle">
-@style/MyActionBar
                     </item>
                 </style>
             </file>
@@ -5372,6 +5373,16 @@ false
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
+            <file
+                name="compose"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/menu/compose.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="activity_compose"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/layout/activity_compose.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/generated/res/rs/debug" />
         <source path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/build/generated/res/generated/debug" />

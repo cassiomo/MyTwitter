@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:descendantFocusability="blocksDescendants">
+    >
 
     <ImageView
         android:layout_width="30dp"
@@ -81,15 +81,24 @@
         android:layout_alignStart="@+id/ivBody"
         android:weightSum="1">
 
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:background="@drawable/ic_reply"
+            android:id="@+id/btReply" />
+<!--
         <ImageView
             android:layout_width="11dp"
             android:layout_height="11dp"
             android:id="@+id/ivReply"
             android:src="@drawable/ic_reply" />
 
+            -->
+
         <TextView
-            android:layout_width="29dp"
-            android:layout_height="wrap_content"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
             android:id="@+id/tvReply" />
 
         <ImageView
@@ -99,8 +108,8 @@
             android:src="@drawable/ic_retweetcount" />
 
         <TextView
-            android:layout_width="15dp"
-            android:layout_height="wrap_content"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
             android:id="@+id/tvRetweet"
             android:layout_weight="0.10" />
 
@@ -111,10 +120,9 @@
             android:src="@drawable/ic_favoritecount" />
 
         <TextView
-            android:layout_width="12dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvFavorite"
-            android:layout_weight="0.08" />
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:id="@+id/tvFavorite" />
     </LinearLayout>
 
 </RelativeLayout>

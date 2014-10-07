@@ -644,7 +644,7 @@
     <string name="abs__searchview_description_submit">Submit query</string>
     <string name="abs__searchview_description_voice">Voice search</string>
     <string name="abs__shareactionprovider_share_with">Share with</string>
-    <string name="abs__shareactionprovider_share_with_application">Share with <ns1:g id="application_name" example="Bluetooth">%s</ns1:g></string>
+    <string name="abs__shareactionprovider_share_with_application">Share with  <ns1:g id="application_name" example="Bluetooth">%s</ns1:g></string>
     <!-- From: file:/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
@@ -677,6 +677,7 @@
     <!-- From: file:/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="title_activity_compose">ComposeActivity</string>
     <string name="title_activity_photos">Flickr Photos</string>
     <string name="title_activity_time_line">Home</string>
     <string name="title_activity_tweet_detail">Tweet Detail</string>

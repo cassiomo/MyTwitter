@@ -33,7 +33,7 @@
 <ul>
 <li><strong>[x]Advanced:</strong> Robust error handling, <a href="http://guides.codepath.com/android/Sending-and-Managing-Network-Requests#checking-for-network-connectivity">check if internet is available</a>, handle error cases, network failures</li>
 <li><strong>[x]Advanced:</strong> When a network request is sent, user sees an <a href="http://guides.codepath.com/android/Handling-ProgressBars#actionbar-progress-bar">indeterminate progress indicator</a></li>
-<li><strong>Advanced:</strong> User can "reply" to any tweet on their home timeline
+<li><strong>[x]Advanced:</strong> User can "reply" to any tweet on their home timeline
 
 <ul>
 <li>The user that wrote the original tweet is automatically "@" replied in compose</li>
