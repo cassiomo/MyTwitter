@@ -54,14 +54,26 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
             }
         });
 
+
+        ImageLoader imageLoader = ImageLoader.getInstance();
+        if (tweet.getFavoriteCount() !=0) {
+            TextView tvFavorite = (TextView) v.findViewById(R.id.tvFavorite);
+            tvFavorite.setText(String.valueOf(tweet.getFavoriteCount()));
+        }
+        if (tweet.getRetweetCount() !=0) {
+            TextView tvRetweet = (TextView) v.findViewById(R.id.tvRetweet);
+            tvRetweet.setText(String.valueOf(tweet.getRetweetCount()));
+        }
+        if (tweet.getMediaUrl() !=null) {
+            ImageView ivBody = (ImageView) v.findViewById(R.id.ivBody);
+            imageLoader.displayImage(tweet.getMediaUrl(), ivBody);
+        }
         TextView tvScreenName = (TextView) v.findViewById((R.id.tvScreenName));
         TextView tvName = (TextView) v.findViewById(R.id.tvName);
         TextView tvBody = (TextView) v.findViewById(R.id.tvBody);
         TextView tvCreatedAt = (TextView)v.findViewById(R.id.tvCreateAt);
         //ivProfileImage.setImageResource(android.R.color.transparent);
         ivProfileImage.setImageResource(0);
-
-        ImageLoader imageLoader = ImageLoader.getInstance();
         imageLoader.displayImage(tweet.getUser().getProfileImageUrl(), ivProfileImage);
         tvScreenName.setText("@" + tweet.getUser().getScreenName());
         tvCreatedAt.setText(tweet.getCreatedAt());

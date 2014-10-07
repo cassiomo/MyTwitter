@@ -63,4 +63,57 @@
         android:layout_alignParentEnd="true"
         android:textColor="#8899a6"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivBody"
+        android:layout_below="@+id/tvBody"
+        android:layout_alignLeft="@+id/tvBody"
+        android:layout_alignStart="@+id/tvBody" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ivBody"
+        android:layout_alignLeft="@+id/ivBody"
+        android:layout_alignStart="@+id/ivBody"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:id="@+id/ivReply"
+            android:src="@drawable/ic_reply" />
+
+        <TextView
+            android:layout_width="29dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReply" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:id="@+id/ivRetweet"
+            android:src="@drawable/ic_retweetcount" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRetweet"
+            android:layout_weight="0.10" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:id="@+id/ivfavorite"
+            android:src="@drawable/ic_favoritecount" />
+
+        <TextView
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFavorite"
+            android:layout_weight="0.08" />
+    </LinearLayout>
+
 </RelativeLayout>

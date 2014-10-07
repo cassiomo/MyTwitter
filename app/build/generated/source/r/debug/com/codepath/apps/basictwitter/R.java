@@ -1108,12 +1108,15 @@ containing a value of this type.
         public static final int divider=0x7f020071;
         public static final int ic_background=0x7f020072;
         public static final int ic_email=0x7f020073;
-        public static final int ic_home=0x7f020074;
-        public static final int ic_launcher=0x7f020075;
-        public static final int ic_profile=0x7f020076;
-        public static final int ic_search=0x7f020077;
-        public static final int ic_tweet=0x7f020078;
-        public static final int ic_tweet_white=0x7f020079;
+        public static final int ic_favoritecount=0x7f020074;
+        public static final int ic_home=0x7f020075;
+        public static final int ic_launcher=0x7f020076;
+        public static final int ic_profile=0x7f020077;
+        public static final int ic_reply=0x7f020078;
+        public static final int ic_retweetcount=0x7f020079;
+        public static final int ic_search=0x7f02007a;
+        public static final int ic_tweet=0x7f02007b;
+        public static final int ic_tweet_white=0x7f02007c;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f060029;
@@ -1155,20 +1158,24 @@ containing a value of this type.
         public static final int abs__textButton=0x7f06001c;
         public static final int abs__title=0x7f060024;
         public static final int abs__up=0x7f060015;
-        public static final int action_search=0x7f060054;
-        public static final int action_settings=0x7f060050;
+        public static final int action_search=0x7f06005b;
+        public static final int action_settings=0x7f060057;
         public static final int disableHome=0x7f06000a;
         public static final int edit_query=0x7f06002f;
         public static final int etStatus=0x7f06003e;
         public static final int fUserTimeline=0x7f060041;
         public static final int flTimelineContainer=0x7f06004b;
         public static final int homeAsUp=0x7f060007;
-        public static final int iEmail=0x7f060053;
-        public static final int iPostTweet=0x7f060051;
-        public static final int iProfile=0x7f060052;
-        public static final int iTweetLength=0x7f060055;
+        public static final int iEmail=0x7f06005a;
+        public static final int iPostTweet=0x7f060058;
+        public static final int iProfile=0x7f060059;
+        public static final int iTweetLength=0x7f06005c;
         public static final int inside=0x7f060000;
+        public static final int ivBody=0x7f060050;
         public static final int ivProfileImage=0x7f06003b;
+        public static final int ivReply=0x7f060051;
+        public static final int ivRetweet=0x7f060053;
+        public static final int ivfavorite=0x7f060055;
         public static final int listMode=0x7f060003;
         public static final int llFollowers=0x7f060042;
         public static final int lvSearchTweets=0x7f06004a;
@@ -1191,11 +1198,14 @@ containing a value of this type.
         public static final int tabMode=0x7f060004;
         public static final int tvBody=0x7f06004e;
         public static final int tvCreateAt=0x7f06004f;
+        public static final int tvFavorite=0x7f060056;
         public static final int tvFollowers=0x7f060048;
         public static final int tvFollowersSize=0x7f060047;
         public static final int tvFollowing=0x7f060046;
         public static final int tvFollowingSize=0x7f060045;
         public static final int tvName=0x7f06003c;
+        public static final int tvReply=0x7f060052;
+        public static final int tvRetweet=0x7f060054;
         public static final int tvScreenName=0x7f06003d;
         public static final int tvTweets=0x7f060044;
         public static final int tvTweetsSize=0x7f060043;
@@ -1276,14 +1286,15 @@ containing a value of this type.
         public static final int pull_to_refresh_pull_label=0x7f090017;
         public static final int pull_to_refresh_refreshing_label=0x7f090018;
         public static final int pull_to_refresh_release_label=0x7f090019;
-        public static final int screen_name=0x7f09001a;
-        public static final int search=0x7f09001b;
-        public static final int spb_default_speed=0x7f09001c;
-        public static final int title_activity_photos=0x7f09001d;
-        public static final int title_activity_time_line=0x7f09001e;
-        public static final int tweet=0x7f09001f;
-        public static final int tweet_body=0x7f090020;
-        public static final int tweets_profile=0x7f090021;
+        public static final int reply_label=0x7f09001a;
+        public static final int screen_name=0x7f09001b;
+        public static final int search=0x7f09001c;
+        public static final int spb_default_speed=0x7f09001d;
+        public static final int title_activity_photos=0x7f09001e;
+        public static final int title_activity_time_line=0x7f09001f;
+        public static final int tweet=0x7f090020;
+        public static final int tweet_body=0x7f090021;
+        public static final int tweets_profile=0x7f090022;
     }
     public static final class style {
         /** 

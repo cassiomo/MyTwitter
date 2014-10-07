@@ -4913,6 +4913,11 @@ false
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
+                name="ic_favoritecount"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_favoritecount.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_home"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_home.png"
                 qualifiers="hdpi-v4"
@@ -4925,6 +4930,16 @@ false
             <file
                 name="ic_profile"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_profile.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_reply"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_reply.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_retweetcount"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_retweetcount.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
@@ -4953,6 +4968,11 @@ false
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
+                name="ic_favoritecount"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_favoritecount.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_home"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_home.png"
                 qualifiers="mdpi-v4"
@@ -4965,6 +4985,16 @@ false
             <file
                 name="ic_profile"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_profile.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_reply"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_reply.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_retweetcount"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_retweetcount.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
@@ -4993,6 +5023,11 @@ false
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
+                name="ic_favoritecount"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_favoritecount.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_home"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_home.png"
                 qualifiers="xhdpi-v4"
@@ -5005,6 +5040,16 @@ false
             <file
                 name="ic_profile"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_profile.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_reply"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_reply.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_retweetcount"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_retweetcount.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
@@ -5033,6 +5078,11 @@ false
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
+                name="ic_favoritecount"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_favoritecount.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_home"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_home.png"
                 qualifiers="xxhdpi-v4"
@@ -5045,6 +5095,16 @@ false
             <file
                 name="ic_profile"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_profile.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_reply"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_reply.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_retweetcount"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_retweetcount.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
@@ -5138,6 +5198,8 @@ false
             <file
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/values/strings.xml"
                 qualifiers="" >
+                <string name="reply_label" >reply
+                </string>
                 <string name="login_label" >Connect to Twitter
                 </string>
                 <string name="search" >Search

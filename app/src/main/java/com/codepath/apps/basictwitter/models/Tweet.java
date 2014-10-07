@@ -23,6 +23,10 @@ public class Tweet implements Serializable {
     private long tId;
     private String createdAt;
     private User user;
+    private int retweetCount;
+    private int favoriteCount;
+    private String mediaUrl;
+
     //private ArrayList<String> replies;
 
 //    private Tweet(Parcel in) {
@@ -43,6 +47,12 @@ public class Tweet implements Serializable {
             tweet.tId = jsonObject.getLong("id");
             tweet.createdAt = jsonObject.getString("created_at");
             tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
+            tweet.retweetCount = jsonObject.getInt("retweet_count");
+            tweet.favoriteCount = jsonObject.getInt("favorite_count");
+            TweetEntities entities = TweetEntities.fromJson(jsonObject.getJSONObject("entities"));
+            if (entities !=null) {
+                tweet.mediaUrl = entities.getMediaUrl();
+            }
         } catch (JSONException e) {
             e.printStackTrace();
             return null;
@@ -136,6 +146,30 @@ public class Tweet implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public int getRetweetCount() {
+        return retweetCount;
+    }
+
+    public void setRetweetCount(int retweetCount) {
+        this.retweetCount = retweetCount;
+    }
+
+    public int getFavoriteCount() {
+        return favoriteCount;
+    }
+
+    public void setFavoriteCount(int favoriteCount) {
+        this.favoriteCount = favoriteCount;
+    }
+
+    public String getMediaUrl() {
+        return mediaUrl;
+    }
+
+    public void setMediaUrl(String mediaUrl) {
+        this.mediaUrl = mediaUrl;
     }
 
     @Override

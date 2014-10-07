@@ -19,5 +19,6 @@
     <string name="tweets_profile">TWEETS</string>
     <string name="following_profile">FOLLOWING</string>
     <string name="follower_profile">FOLLOWERS</string>
+    <string name="reply_label">reply</string>
 
 </resources>
