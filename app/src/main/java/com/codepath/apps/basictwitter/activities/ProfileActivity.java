@@ -78,7 +78,7 @@ public class ProfileActivity extends SherlockFragmentActivity {
                 tvFollwersSize.setText(user.getFollowers());
 				tvFollwers.setText("Followers");
 
-                //Picasso.with(getApplicationContext()).load(user.getProfileBackgroundImageUrl()).into(target);
+                Picasso.with(getApplicationContext()).load(user.getProfileBackgroundImageUrl()).into(target);
 
 				ivProfileImage.setImageResource(0);
 			    ImageLoader imageLoader = ImageLoader.getInstance();

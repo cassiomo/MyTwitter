@@ -43,7 +43,7 @@
 <li><strong>[x]Advanced:</strong> User can click on a tweet to be taken to a "detail view" of that tweet
 
 <ul>
-<li><strong>Advanced:</strong> User can take favorite (and unfavorite) or reweet actions on a tweet</li>
+<li><strong>[X]Advanced:</strong> User can take favorite (and unfavorite) or reweet actions on a tweet</li>
 </ul></li>
 <li><strong>[x]Advanced:</strong> Improve the user interface and theme the app to feel twitter branded</li>
 <li><strong>[x]Advanced</strong>: User can search for tweets matching a particular query and see results</li>

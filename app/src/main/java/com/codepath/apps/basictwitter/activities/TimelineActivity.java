@@ -1,6 +1,7 @@
 package com.codepath.apps.basictwitter.activities;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -11,6 +12,7 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.Window;
 import com.codepath.apps.basictwitter.fragments.HomeFragment;
 import com.codepath.apps.basictwitter.fragments.MentionsFragment;
 import com.codepath.apps.basictwitter.R;
@@ -28,6 +30,7 @@ import android.widget.Toast;
 
 import org.json.JSONArray;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
@@ -40,10 +43,13 @@ public class TimelineActivity extends SherlockFragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time_line);
 
-        setupTabs();
+        // MUST request the feature before setting content view
+        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+        setContentView(R.layout.activity_time_line);
         showProgressBar();
+        setupTabs();
+        hideProgressBar();
     }
 
     private void setupTabs() {
@@ -54,6 +60,7 @@ public class TimelineActivity extends SherlockFragmentActivity {
         ActionBar.Tab tab1 = actionBar
                 .newTab()
                 .setText("Home")
+                .setIcon(R.drawable.ic_home_profile)
                 .setTag("HomeFragment")
                 .setTabListener(new SherlockTabListener<HomeFragment>(R.id.flTimelineContainer, this,
                         "home", HomeFragment.class));
@@ -63,15 +70,12 @@ public class TimelineActivity extends SherlockFragmentActivity {
 
         ActionBar.Tab tab2 = actionBar
                 .newTab()
+                .setIcon(R.drawable.ic_mentions)
                 .setText("Mentions")
                 .setTag("MentionsFragment")
                 .setTabListener(new SherlockTabListener<MentionsFragment>(R.id.flTimelineContainer, this,
                         "mentions", MentionsFragment.class));
-//                .setTabListener(new FragmentTabListener<MentionsFragment>(R.id.flContainer, this,
-//                        "mentions", MentionsFragment.class));
         actionBar.addTab(tab2);
-        //getSupportFragmentManager().executePendingTransactions();
-
     }
 
     public void onPostTweet(MenuItem mi) {
@@ -81,25 +85,30 @@ public class TimelineActivity extends SherlockFragmentActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Tweet tweet = (Tweet) data.getSerializableExtra("tweet");
-        HomeFragment homeFragment;
-        switch (requestCode) {
-            case 10:
-                // Post tweet case
-                homeFragment = (HomeFragment)
-                        getSupportFragmentManager().findFragmentByTag("home");
-                homeFragment.updatePostTweet(tweet);
-                break;
-            case 20:
-                homeFragment = (HomeFragment)
-                        getSupportFragmentManager().findFragmentByTag("home");
-                String pos = (String)data.getStringExtra("position");
-                int replyPosition = Integer.valueOf(pos);
-                homeFragment.updateReplyCount(tweet, replyPosition);
-                // Reply case
-                break;
-            default:
-                Log.i("Default", "default");
+        if (data !=null) {
+            Serializable serializable = data.getSerializableExtra("tweet");
+            if (serializable != null) {
+                Tweet tweet = (Tweet) serializable;
+                HomeFragment homeFragment;
+                switch (requestCode) {
+                    case 10:
+                        // Post tweet case
+                        homeFragment = (HomeFragment)
+                                getSupportFragmentManager().findFragmentByTag("home");
+                        homeFragment.updatePostTweet(tweet);
+                        break;
+                    case 20:
+                        homeFragment = (HomeFragment)
+                                getSupportFragmentManager().findFragmentByTag("home");
+                        String pos = (String) data.getStringExtra("position");
+                        int replyPosition = Integer.valueOf(pos);
+                        homeFragment.updateReplyCount(tweet, replyPosition);
+                        // Reply case
+                        break;
+                    default:
+                        Log.i("Default", "default");
+                }
+            }
         }
     }
 

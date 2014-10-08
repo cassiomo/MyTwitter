@@ -50,11 +50,6 @@ public class TweetsFragment extends SherlockFragment {
         return tweetsFragment;
     }
 
-//    @Override
-//    public void onActivityCreated(Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -110,14 +105,8 @@ public class TweetsFragment extends SherlockFragment {
 		    	aTweets.notifyDataSetChanged();
 		    }			
 	    });
-//
-//        lvTweets.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.i("Debug", "Testing");
-//            }
-//        });
-		
+
+        lvTweets.setDescendantFocusability(container.FOCUS_BLOCK_DESCENDANTS);
 		lvTweets.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -207,7 +196,9 @@ public class TweetsFragment extends SherlockFragment {
 
 
     private void loadMoreTweets(long maxId) {
+        getActivity().setProgressBarIndeterminateVisibility(true);
         populateTimeline(maxId);
+        getActivity().setProgressBarIndeterminateVisibility(false);
     }
 	
 	public void addTweet() {

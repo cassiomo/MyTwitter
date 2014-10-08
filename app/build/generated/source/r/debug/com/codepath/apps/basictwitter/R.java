@@ -1107,16 +1107,20 @@ containing a value of this type.
         public static final int border=0x7f020070;
         public static final int divider=0x7f020071;
         public static final int ic_background=0x7f020072;
-        public static final int ic_email=0x7f020073;
-        public static final int ic_favoritecount=0x7f020074;
-        public static final int ic_home=0x7f020075;
-        public static final int ic_launcher=0x7f020076;
-        public static final int ic_profile=0x7f020077;
-        public static final int ic_reply=0x7f020078;
-        public static final int ic_retweetcount=0x7f020079;
-        public static final int ic_search=0x7f02007a;
-        public static final int ic_tweet=0x7f02007b;
-        public static final int ic_tweet_white=0x7f02007c;
+        public static final int ic_darkfavor=0x7f020073;
+        public static final int ic_email=0x7f020074;
+        public static final int ic_favoritecount=0x7f020075;
+        public static final int ic_home=0x7f020076;
+        public static final int ic_home_profile=0x7f020077;
+        public static final int ic_launcher=0x7f020078;
+        public static final int ic_mentions=0x7f020079;
+        public static final int ic_myprofile=0x7f02007a;
+        public static final int ic_profile=0x7f02007b;
+        public static final int ic_reply=0x7f02007c;
+        public static final int ic_retweetcount=0x7f02007d;
+        public static final int ic_search=0x7f02007e;
+        public static final int ic_tweet=0x7f02007f;
+        public static final int ic_tweet_white=0x7f020080;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f060029;
@@ -1160,7 +1164,9 @@ containing a value of this type.
         public static final int abs__up=0x7f060015;
         public static final int action_search=0x7f06006e;
         public static final int action_settings=0x7f06006a;
+        public static final int btFavorite=0x7f060066;
         public static final int btReply=0x7f060062;
+        public static final int btRetweet=0x7f060064;
         public static final int disableHome=0x7f06000a;
         public static final int edit_query=0x7f06002f;
         public static final int etComposeStatus=0x7f06003e;
@@ -1183,8 +1189,6 @@ containing a value of this type.
         public static final int ivDetailRetweet=0x7f060059;
         public static final int ivDetailfavorite=0x7f06005b;
         public static final int ivProfileImage=0x7f06003f;
-        public static final int ivRetweet=0x7f060064;
-        public static final int ivfavorite=0x7f060066;
         public static final int linearLayout2=0x7f060056;
         public static final int listMode=0x7f060003;
         public static final int llFollowers=0x7f060046;

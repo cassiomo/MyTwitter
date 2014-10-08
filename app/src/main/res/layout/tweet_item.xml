@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="30dp"
@@ -70,59 +69,74 @@
         android:id="@+id/ivBody"
         android:layout_below="@+id/tvBody"
         android:layout_alignLeft="@+id/tvBody"
-        android:layout_alignStart="@+id/tvBody" />
+        android:layout_alignStart="@+id/tvBody"
+        android:layout_toLeftOf="@+id/tvCreateAt" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/ivBody"
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:id="@+id/btReply"
+        android:background="@drawable/ic_reply"
         android:layout_alignLeft="@+id/ivBody"
         android:layout_alignStart="@+id/ivBody"
-        android:weightSum="1">
+        android:layout_below="@+id/ivBody" />
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="13dp"
-            android:layout_height="13dp"
-            android:background="@drawable/ic_reply"
-            android:id="@+id/btReply" />
-<!--
-        <ImageView
-            android:layout_width="11dp"
-            android:layout_height="11dp"
-            android:id="@+id/ivReply"
-            android:src="@drawable/ic_reply" />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="13dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/tvReply"
+        android:textSize="10dp"
+        android:layout_below="@+id/ivBody"
+        android:textColor="#8899a6"
+        android:layout_toRightOf="@+id/btReply" />
 
-            -->
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:id="@+id/btRetweet"
+        android:background="@drawable/ic_retweetcount"
+        android:layout_below="@+id/ivBody"
+        android:layout_toRightOf="@+id/tvReply" />
 
-        <TextView
-            android:layout_width="13dp"
-            android:layout_height="13dp"
-            android:id="@+id/tvReply" />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="13dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/tvRetweet"
+        android:textColor="#8899a6"
+        android:textSize="10dp"
+        android:layout_below="@+id/ivBody"
+        android:layout_toRightOf="@+id/btRetweet" />
 
-        <ImageView
-            android:layout_width="13dp"
-            android:layout_height="13dp"
-            android:id="@+id/ivRetweet"
-            android:src="@drawable/ic_retweetcount" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:id="@+id/btFavorite"
+        android:background="@drawable/ic_favoritecount"
+        android:layout_below="@+id/ivBody"
+        android:layout_toRightOf="@+id/tvRetweet" />
 
-        <TextView
-            android:layout_width="13dp"
-            android:layout_height="13dp"
-            android:id="@+id/tvRetweet"
-            android:layout_weight="0.10" />
+    <TextView
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/tvFavorite"
+        android:textColor="#8899a6"
+        android:textSize="10dp"
+        android:layout_below="@+id/ivBody"
+        android:layout_toRightOf="@+id/btFavorite" />
 
-        <ImageView
-            android:layout_width="13dp"
-            android:layout_height="13dp"
-            android:id="@+id/ivfavorite"
-            android:src="@drawable/ic_favoritecount" />
+    <!--
+    <ImageView
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:id="@+id/ivReply"
+        android:src="@drawable/ic_reply" />
 
-        <TextView
-            android:layout_width="13dp"
-            android:layout_height="13dp"
-            android:id="@+id/tvFavorite" />
-    </LinearLayout>
+        -->
 
 </RelativeLayout>

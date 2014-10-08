@@ -4908,6 +4908,11 @@ false
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
+                name="ic_darkfavor"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_darkfavor.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_email"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_email.png"
                 qualifiers="hdpi-v4"
@@ -4923,8 +4928,23 @@ false
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
+                name="ic_home_profile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_home_profile.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_mentions"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_mentions.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_myprofile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-hdpi/ic_myprofile.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
@@ -4963,6 +4983,11 @@ false
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
+                name="ic_darkfavor"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_darkfavor.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_email"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_email.png"
                 qualifiers="mdpi-v4"
@@ -4978,8 +5003,23 @@ false
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
+                name="ic_home_profile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_home_profile.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_mentions"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_mentions.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_myprofile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-mdpi/ic_myprofile.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
@@ -5018,6 +5058,11 @@ false
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
+                name="ic_darkfavor"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_darkfavor.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_email"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_email.png"
                 qualifiers="xhdpi-v4"
@@ -5033,8 +5078,23 @@ false
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
+                name="ic_home_profile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_home_profile.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_mentions"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_mentions.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_myprofile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xhdpi/ic_myprofile.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
@@ -5073,6 +5133,11 @@ false
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
+                name="ic_darkfavor"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_darkfavor.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_email"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_email.png"
                 qualifiers="xxhdpi-v4"
@@ -5088,8 +5153,23 @@ false
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
+                name="ic_home_profile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_home_profile.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_mentions"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_mentions.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_myprofile"
+                path="/Users/kemo/AndroidStudioProjects/MyTwitterClient/app/src/main/res/drawable-xxhdpi/ic_myprofile.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file

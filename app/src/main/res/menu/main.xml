@@ -5,13 +5,13 @@
           android:title="@string/tweet"
           android:showAsAction="always"
           android:onClick="onPostTweet"
-          android:icon="@drawable/ic_tweet_white"/>
+          android:icon="@drawable/ic_tweet"/>
 
     <item android:id="@+id/iProfile"
           android:title="@string/profile"
           android:showAsAction="always"
           android:onClick="onProfileView"
-          android:icon="@drawable/ic_profile"/>
+          android:icon="@drawable/ic_myprofile"/>
 
     <item android:id="@+id/iEmail"
         android:title="@string/email"

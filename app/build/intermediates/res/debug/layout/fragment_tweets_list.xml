@@ -21,7 +21,6 @@ android:orientation="vertical" >
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
-
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>

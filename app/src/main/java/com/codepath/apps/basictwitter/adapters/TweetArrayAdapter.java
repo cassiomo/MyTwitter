@@ -3,6 +3,7 @@ package com.codepath.apps.basictwitter.adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +28,9 @@ import java.util.List;
  * Created by kemo on 9/27/14.
  */
 public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
+
+    //private TextView tvFavorite = null;
+
     public TweetArrayAdapter(Context context, List<Tweet> tweets) {
         super(context, 0, tweets);
     }
@@ -72,15 +76,48 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
                 i.putExtra("tweet", tweet);
                 i.putExtra("position", String.valueOf(position));
                 ((TimelineActivity)getContext()).startCommentActivity(i);
-                //v.getContext().startActivity(i);
-                //((Activity)getContext()).startActivityForResult(i,Activity.RESULT_OK);
             }
         });
 
+        Button btRetweet = (Button)v.findViewById(R.id.btRetweet);
+        btRetweet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater inflater = LayoutInflater.from(getContext());
+                v.setFocusable(true);
+                v.setFocusableInTouchMode(true);
+
+                // Retweet logic
+//                Intent i = new Intent(inflater.getContext(), ComposeActivity.class);
+//                i.putExtra("tweet", tweet);
+//                i.putExtra("position", String.valueOf(position));
+//                ((TimelineActivity)getContext()).startCommentActivity(i);
+            }
+        });
+
+        final TextView tvFavorite = (TextView) v.findViewById(R.id.tvFavorite);
+
+        final Button btFavorite = (Button)v.findViewById(R.id.btFavorite);
+        btFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater inflater = LayoutInflater.from(getContext());
+                v.setFocusable(true);
+                v.setFocusableInTouchMode(true);
+                int favoriteCount = tweet.getFavoriteCount() + 1;
+                tweet.setFavoriteCount(favoriteCount);
+                btFavorite.setBackgroundResource(R.drawable.ic_darkfavor);
+                if (btFavorite.getBackground().equals(R.drawable.ic_favoritecount)) {
+                    btFavorite.setBackgroundResource(R.drawable.ic_darkfavor);
+                } else {
+                    btFavorite.setBackgroundResource(R.drawable.ic_favoritecount);
+                }
+                tvFavorite.setText(String.valueOf(tweet.getFavoriteCount()));
+            }
+        });
 
         ImageLoader imageLoader = ImageLoader.getInstance();
         if (tweet.getFavoriteCount() !=0) {
-            TextView tvFavorite = (TextView) v.findViewById(R.id.tvFavorite);
             tvFavorite.setText(String.valueOf(tweet.getFavoriteCount()));
         }
         if (tweet.getRetweetCount() !=0) {
