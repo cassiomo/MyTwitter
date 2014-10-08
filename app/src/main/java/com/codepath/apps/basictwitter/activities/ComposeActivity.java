@@ -29,6 +29,7 @@ import org.json.JSONObject;
 public class ComposeActivity extends SherlockFragmentActivity {
 
     private Tweet parentTweet;
+    private String partentTweetPosition;
     private EditText etComposeStatus;
     private ImageView ivComposeProfileImage;
     private TextView tvComposeName;
@@ -49,7 +50,9 @@ public class ComposeActivity extends SherlockFragmentActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        parentTweet = (Tweet)getIntent().getSerializableExtra("tweet");
+        Intent intent = getIntent();
+        parentTweet = (Tweet)intent.getSerializableExtra("tweet");
+        partentTweetPosition = intent.getStringExtra("position");
 
         etComposeStatus = (EditText)findViewById(R.id.etComposeStatus);
         etComposeStatus.setText("@" + parentTweet.getUser().getScreenName());
@@ -113,6 +116,7 @@ public class ComposeActivity extends SherlockFragmentActivity {
         newTweet.setBody(etComposeStatus.getText().toString());
         newTweet.setCreatedAt(System.currentTimeMillis() + "");
         newTweet.setUid(1);
+        newTweet.setReplyCount(1);
 
         client.postReply(etComposeStatus.getText().toString(), parentTweet.gettId(), new JsonHttpResponseHandler() {
             @Override
@@ -129,10 +133,11 @@ public class ComposeActivity extends SherlockFragmentActivity {
             }
         });
 
-//        Intent data = new Intent();
-//        data.putExtra("tweet", newTweet);
-//        setResult(RESULT_OK, data);
-//        finish();
+        Intent data = new Intent();
+        data.putExtra("tweet", newTweet);
+        data.putExtra("position", partentTweetPosition);
+        setResult(RESULT_OK, data);
+        finish();
     }
 
 //    @Override

@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -49,8 +50,24 @@ public class TweetsFragment extends SherlockFragment {
         return tweetsFragment;
     }
 
+//    @Override
+//    public void onActivityCreated(Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.i("Testing", "testing");
+    }
+
     public void updatePostTweet(Tweet tweet) {
         tweets.add(0, tweet);
+        aTweets.notifyDataSetChanged();
+    }
+
+    public void updateReplyCount(Tweet tweet, int position) {
+        tweets.add(position,tweet);
         aTweets.notifyDataSetChanged();
     }
 
@@ -187,6 +204,7 @@ public class TweetsFragment extends SherlockFragment {
             }
         }
     }
+
 
     private void loadMoreTweets(long maxId) {
         populateTimeline(maxId);

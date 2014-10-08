@@ -1,5 +1,6 @@
 package com.codepath.apps.basictwitter.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,6 +32,12 @@ public class MentionsFragment extends TweetsFragment {
 		client = TwitterApplication.getRestClient();
 		populateTimeline(0);
 	}
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.i("Testing", "testing");
+    }
 	
 	@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,

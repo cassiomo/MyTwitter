@@ -24,6 +24,7 @@ import com.codepath.apps.basictwitter.models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 
@@ -32,7 +33,8 @@ import java.util.ArrayList;
 
 public class TimelineActivity extends SherlockFragmentActivity {
 
-    private static int REQUEST_CODE = 10;
+    private static int POST_TWEET_REQUEST_CODE = 10;
+    private static int REPLY_TWEET_REQUEST_CODE = 20;
     private SearchView searchView;
 
     @Override
@@ -74,18 +76,35 @@ public class TimelineActivity extends SherlockFragmentActivity {
 
     public void onPostTweet(MenuItem mi) {
         Intent i = new Intent(this, PostTweetActivity.class);
-        startActivityForResult(i, REQUEST_CODE);
+        startActivityForResult(i, POST_TWEET_REQUEST_CODE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(resultCode == RESULT_OK && requestCode == REQUEST_CODE){
-            Tweet tweet = (Tweet) data.getSerializableExtra("tweet");
-            HomeFragment homeFragment = (HomeFragment)
-                    getSupportFragmentManager().findFragmentByTag("home");
-            homeFragment.updatePostTweet(tweet);
+        Tweet tweet = (Tweet) data.getSerializableExtra("tweet");
+        HomeFragment homeFragment;
+        switch (requestCode) {
+            case 10:
+                // Post tweet case
+                homeFragment = (HomeFragment)
+                        getSupportFragmentManager().findFragmentByTag("home");
+                homeFragment.updatePostTweet(tweet);
+                break;
+            case 20:
+                homeFragment = (HomeFragment)
+                        getSupportFragmentManager().findFragmentByTag("home");
+                String pos = (String)data.getStringExtra("position");
+                int replyPosition = Integer.valueOf(pos);
+                homeFragment.updateReplyCount(tweet, replyPosition);
+                // Reply case
+                break;
+            default:
+                Log.i("Default", "default");
         }
+    }
 
+    public void startCommentActivity(Intent i){
+        startActivityForResult(i, REPLY_TWEET_REQUEST_CODE);
     }
 
     public void onProfileView(MenuItem mi){

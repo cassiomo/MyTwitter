@@ -26,6 +26,7 @@ public class Tweet implements Serializable {
     private int retweetCount;
     private int favoriteCount;
     private String mediaUrl;
+    private int replyCount;
 
     //private ArrayList<String> replies;
 
@@ -114,6 +115,14 @@ public class Tweet implements Serializable {
             }
         }
         return tweets;
+    }
+
+    public int getReplyCount() {
+        return replyCount;
+    }
+
+    public void setReplyCount(int replyCount) {
+        this.replyCount = replyCount;
     }
 
     public String getBody() {

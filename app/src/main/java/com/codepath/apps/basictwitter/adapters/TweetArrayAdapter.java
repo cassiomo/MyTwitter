@@ -1,5 +1,6 @@
 package com.codepath.apps.basictwitter.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -16,6 +17,7 @@ import com.codepath.apps.basictwitter.R;
 import com.codepath.apps.basictwitter.activities.ComposeActivity;
 import com.codepath.apps.basictwitter.activities.ProfileActivity;
 import com.codepath.apps.basictwitter.activities.TimelineActivity;
+import com.codepath.apps.basictwitter.fragments.HomeFragment;
 import com.codepath.apps.basictwitter.models.Tweet;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -68,7 +70,10 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
                 v.setFocusableInTouchMode(true);
                 Intent i = new Intent(inflater.getContext(), ComposeActivity.class);
                 i.putExtra("tweet", tweet);
-                v.getContext().startActivity(i);
+                i.putExtra("position", String.valueOf(position));
+                ((TimelineActivity)getContext()).startCommentActivity(i);
+                //v.getContext().startActivity(i);
+                //((Activity)getContext()).startActivityForResult(i,Activity.RESULT_OK);
             }
         });
 
@@ -86,6 +91,11 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
             ImageView ivBody = (ImageView) v.findViewById(R.id.ivBody);
             imageLoader.displayImage(tweet.getMediaUrl(), ivBody);
         }
+
+        if (tweet.getReplyCount() !=0) {
+            TextView tvReply = (TextView) v.findViewById(R.id.tvReply);
+            tvReply.setText(String.valueOf(tweet.getReplyCount()));
+        }
         TextView tvScreenName = (TextView) v.findViewById((R.id.tvScreenName));
         TextView tvName = (TextView) v.findViewById(R.id.tvName);
         TextView tvBody = (TextView) v.findViewById(R.id.tvBody);
@@ -98,5 +108,14 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
         tvName.setText(tweet.getUser().getName());
         tvBody.setText(tweet.getBody());
         return v;
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        Log.i("DEBUG", "Testing");
+
+        if(resultCode == Activity.RESULT_OK){
+
+        }
     }
 }

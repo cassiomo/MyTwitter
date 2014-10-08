@@ -20,10 +20,8 @@ import com.codepath.apps.basictwitter.R;
 import com.codepath.apps.basictwitter.TwitterApplication;
 import com.codepath.apps.basictwitter.TwitterClient;
 import com.codepath.apps.basictwitter.adapters.TweetArrayAdapter;
-import com.codepath.apps.basictwitter.fragments.AllTweetsFragment;
 import com.codepath.apps.basictwitter.fragments.HomeFragment;
 import com.codepath.apps.basictwitter.fragments.MentionsFragment;
-import com.codepath.apps.basictwitter.fragments.TopTweetsFragment;
 import com.codepath.apps.basictwitter.listeners.EndlessScrollListener;
 import com.codepath.apps.basictwitter.listeners.SherlockTabListener;
 import com.codepath.apps.basictwitter.models.Tweet;
@@ -112,7 +110,7 @@ public class SearchActivity extends SherlockFragmentActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(resultCode == RESULT_OK && requestCode == REQUEST_CODE){
             Tweet tweet = (Tweet) data.getSerializableExtra("tweet");
             HomeFragment homeFragment = (HomeFragment)

@@ -26,7 +26,7 @@ public class TweetEntities  implements Serializable {
                 entities.mediaUrl = null;
             }
         } catch (JSONException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             entities.mediaUrl = null;
             return null;
         }

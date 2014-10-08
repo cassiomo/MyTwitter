@@ -111,7 +111,7 @@ public class PostTweetActivity extends SherlockFragmentActivity {
 
             Intent data = new Intent();
             data.putExtra("tweet", newTweet);
-            setResult(RESULT_OK, data);
+            setResult(10, data);
             finish();
         } else {
             Toast.makeText(getApplicationContext(), "Please enter text", Toast.LENGTH_SHORT).show();

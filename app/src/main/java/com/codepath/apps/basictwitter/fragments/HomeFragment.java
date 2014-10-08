@@ -1,5 +1,6 @@
 package com.codepath.apps.basictwitter.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,7 +47,13 @@ public class HomeFragment extends TweetsFragment {
 	
 		return super.onCreateView(inflater, container, savedInstanceState);
 	}
-	
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.i("Testing", "testing");
+    }
+
 	public void populateTimeline(long maxId){
 		client.getHomeTimeline(new JsonHttpResponseHandler(){
 			@Override
