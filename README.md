@@ -38,7 +38,7 @@
 <li><strong>[x]Advanced:</strong> User can "reply" to any tweet on their home timeline
 
 <ul>
-<li>The user that wrote the original tweet is automatically "@" replied in compose</li>
+<li>[x}The user that wrote the original tweet is automatically "@" replied in compose</li>
 </ul></li>
 <li><strong>[x]Advanced:</strong> User can click on a tweet to be taken to a "detail view" of that tweet
 
@@ -50,6 +50,10 @@
 
 <li><strong>Bonus:</strong> User can view their direct messages (or send new ones)</li>
 </ul>
+
+![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/reply.gif "reply.gif")
+
+![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/layout.gif "layout.gif")
 
 ![Alt text](https://github.com/cassiomo/MyTwitter/blob/master/detailview.gif "detailview.gif")
 
